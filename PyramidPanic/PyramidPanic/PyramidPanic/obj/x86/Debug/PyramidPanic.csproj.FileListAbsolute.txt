@@ -1,0 +1,20 @@
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.exe
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.pdb
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.exe
+c:\users\nick\documents\visual studio 2010\Projects\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.pdb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.exe
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\PyramidPanic.pdb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.exe
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\obj\x86\Debug\PyramidPanic.pdb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\TitleScherm\Background.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\TitleScherm\Title.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_help.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_leveleditor.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_load.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_quit.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_scores.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_start.xnb

@@ -1,0 +1,8 @@
+Content\TitleScherm\Background.xnb
+Content\TitleScherm\Title.xnb
+Content\Buttons\Button_help.xnb
+Content\Buttons\Button_leveleditor.xnb
+Content\Buttons\Button_load.xnb
+Content\Buttons\Button_quit.xnb
+Content\Buttons\Button_scores.xnb
+Content\Buttons\Button_start.xnb
