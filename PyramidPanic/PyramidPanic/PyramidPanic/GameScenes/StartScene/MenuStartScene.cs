@@ -65,8 +65,10 @@ namespace PyramidPanic
                 }
                 
             }
-
-            //keyboard buttons 
+ 
+            ////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////keyboard buttons///////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////
             if (Input.EdgeDetectKeyDown(Keys.Enter))
             {
                 if (this.buttonstate == Buttonstate.Start)
@@ -100,7 +102,10 @@ namespace PyramidPanic
                 }
             }
 
-            //mouse buttons
+ 
+            ////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////mouse buttons//////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////
             if (Input.MouseEdgeDetectPressLeft())
             {
                 if (this.start.Rectangle.Intersects(Input.MouseRec()))
@@ -134,8 +139,41 @@ namespace PyramidPanic
                 }
 
             }
+            ////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////buttonstate met muis///////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////
+            if (this.start.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.Start;
+            }
+
+            if (this.load.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.Load;
+            }
+
+            if (this.leveledit.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.Leveledit;
+            }
+
+            if (this.score.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.Score;
+            }
+
+            if (this.help.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.Help;
+            }
+
+            if (this.quit.Rectangle.Intersects(Input.MouseRec()))
+            {
+                this.buttonstate = Buttonstate.quit;
+            }
             
         }
+
         //loadContent
         private void Loadcontent()
         {
