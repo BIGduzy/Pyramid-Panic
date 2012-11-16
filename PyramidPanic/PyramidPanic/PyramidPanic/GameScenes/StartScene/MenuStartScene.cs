@@ -66,6 +66,7 @@ namespace PyramidPanic
                 
             }
 
+            //keyboard buttons 
             if (Input.EdgeDetectKeyDown(Keys.Enter))
             {
                 if (this.buttonstate == Buttonstate.Start)
@@ -98,6 +99,42 @@ namespace PyramidPanic
                     this.game.GameState = new QuitScene(this.game);
                 }
             }
+
+            //mouse buttons
+            if (Input.MouseEdgeDetectPressLeft())
+            {
+                if (this.start.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new PlayScene(this.game);
+                }
+
+                if (this.load.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new LoadScene(this.game);
+                }
+
+                if (this.leveledit.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new LevelEditorScene(this.game);
+                }
+
+                if (this.score.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new ScoreScene(this.game);
+                }
+
+                if (this.help.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new HelpScene(this.game);
+                }
+
+                if (this.quit.Rectangle.Intersects(Input.MouseRec()))
+                {
+                    this.game.GameState = new QuitScene(this.game);
+                }
+
+            }
+            
         }
         //loadContent
         private void Loadcontent()
@@ -112,7 +149,6 @@ namespace PyramidPanic
             
         }
 
-        //update
 
 
         //draw

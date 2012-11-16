@@ -33,13 +33,16 @@ namespace PyramidPanic
         //loadContent
         public void LoadContent()
         {
-
+            
         }
 
         //update
         public void Update(GameTime gameTime)
         {
-
+            if (Input.EdgeDetectKeyDown(Keys.Escape))
+            {
+                this.game.GameState = new StartScene(this.game);
+            }
         }
 
         //Draw

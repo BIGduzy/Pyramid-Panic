@@ -19,6 +19,11 @@ namespace PyramidPanic
         private Vector2 position;
         private PyramidPanic game;
 
+        public Rectangle Rectangle
+        {
+            get { return rectangle; }
+        }
+
         //constructor
         public Picture(PyramidPanic game,string pathName,Vector2 position)
         {
