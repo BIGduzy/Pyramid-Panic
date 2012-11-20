@@ -43,6 +43,19 @@ namespace PyramidPanic
 
         }
 
+        //loadContent
+        private void Loadcontent()
+        {
+            this.start = new Picture(this.game, "Buttons\\Button_start", new Vector2(this.left, this.top));
+            this.load = new Picture(this.game, "Buttons\\Button_load", new Vector2(this.left + this.space, this.top));
+            this.leveledit = new Picture(this.game, "Buttons\\Button_leveleditor", new Vector2(this.left + this.space * 2, this.top));
+            this.score = new Picture(this.game, "Buttons\\Button_scores", new Vector2(this.left + this.space * 3, this.top));
+            this.help = new Picture(this.game, "Buttons\\Button_help", new Vector2(this.left + this.space * 4, this.top));
+            this.quit = new Picture(this.game, "Buttons\\Button_quit", new Vector2(this.left + this.space * 5, this.top));
+
+
+        }
+
         //update
         public void Update(GameTime gameTime)
         {
@@ -174,18 +187,7 @@ namespace PyramidPanic
             
         }
 
-        //loadContent
-        private void Loadcontent()
-        {
-            this.start = new Picture(this.game,"Buttons\\Button_start",new Vector2(this.left,this.top));
-            this.load = new Picture(this.game,"Buttons\\Button_load",new Vector2(this.left+this.space,this.top));
-            this.leveledit = new Picture(this.game, "Buttons\\Button_leveleditor", new Vector2(this.left+this.space*2, this.top));
-            this.score = new Picture(this.game, "Buttons\\Button_scores", new Vector2(this.left+this.space*3, this.top));
-            this.help = new Picture(this.game, "Buttons\\Button_help", new Vector2(this.left+this.space*4, this.top));
-            this.quit = new Picture(this.game, "Buttons\\Button_quit", new Vector2(this.left+this.space*5, this.top));
-            
-            
-        }
+        
 
 
 

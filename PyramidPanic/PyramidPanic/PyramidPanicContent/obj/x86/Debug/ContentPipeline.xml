@@ -73,6 +73,24 @@
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Buttons\Button_start.xnb</Output>
       <Time>2012-11-09T11:12:00.6551836+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlayScene\Blocks\Block.png</Source>
+      <Name>PlayScene\Blocks\Block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Block.xnb</Output>
+      <Time>2012-03-08T09:15:26+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Blocks\Transparant.png</Source>
+      <Name>PlayScene\Blocks\Transparant</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Transparant.xnb</Output>
+      <Time>2012-03-08T09:20:10+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
