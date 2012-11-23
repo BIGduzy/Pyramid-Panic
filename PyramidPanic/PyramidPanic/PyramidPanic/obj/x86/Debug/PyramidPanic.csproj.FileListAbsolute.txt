@@ -22,3 +22,14 @@ C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\Pyramid
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Transparant.xnb
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Levels\0.txt
 C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Levels\1.txt
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Wall1.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Wall2.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\Background2.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Treasure1.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Treasure2.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Potion.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Scarab.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Door.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Panel\Panel.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Panel\Lives.xnb
+C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Fonts\Pfont.xnb
