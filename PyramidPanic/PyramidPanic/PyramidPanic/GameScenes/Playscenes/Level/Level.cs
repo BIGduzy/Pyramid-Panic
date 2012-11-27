@@ -21,6 +21,7 @@ namespace PyramidPanic
        private string levelPath;
        private List<string> lines;
        private Block[,] blocks;
+       private Scorpion scorpion;
        private const int GRIDWIDTH = 32;
        private const int GRIDHEIGHT = 32;
        private Picture background;
@@ -81,30 +82,33 @@ namespace PyramidPanic
                    return new Block(this.game, @"Transparant", new Vector2(x,y), BlockColision.Pas, 'a');
                    
 
-               case 'c':
+               case 'b':
                    this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Treasure2", new Vector2(x, y)));
+                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'b');
+
+               case 'c':
+                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Potion", new Vector2(x, y)));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'c');
 
-               case 'p':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Potion", new Vector2(x, y)));
-                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'p');
+               case 'd':
+                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Scarab", new Vector2(x, y)));
+                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'd');
 
                case 's':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Scarab", new Vector2(x, y)));
+                   this.scorpion = new Scorpion(this.game, new Vector2(x,y),4);
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 's');
-                   
-
-               case 'b':
-                   return new Block(this.game, @"Block", new Vector2(x,y),BlockColision.Npas,'b');
-
-               case 'd':
-                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Npas, 'd');
 
                case 'w':
-                   return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, 'w');
+                   return new Block(this.game, @"Block", new Vector2(x,y),BlockColision.Npas,'w');
+
+               case 'y':
+                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Npas, 'y');
 
                case 'x':
-                   return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'x');
+                   return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, 'x');
+
+               case 'z':
+                   return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'y');
                    
                case '.':
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, '.');
@@ -121,7 +125,7 @@ namespace PyramidPanic
 
        public void Update(GameTime gameTime)
        {
-
+           this.scorpion.Update(gameTime);
        }
 
        public void Draw(GameTime gameTime)
@@ -142,7 +146,7 @@ namespace PyramidPanic
                tressures.Draw(gameTime);
            }
 
-
+           this.scorpion.Draw(gameTime);
        }
 
     }

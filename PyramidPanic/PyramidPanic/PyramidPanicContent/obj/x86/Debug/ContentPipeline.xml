@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Wall1.xnb</Output>
-      <Time>2012-03-08T09:17:56+01:00</Time>
+      <Time>2012-11-23T11:41:22.3441344+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Blocks\Wall2.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Wall2.xnb</Output>
-      <Time>2012-03-08T09:19:10+01:00</Time>
+      <Time>2012-11-23T11:41:22.3461345+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Background\Background2.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\Background2.xnb</Output>
-      <Time>2012-06-03T13:33:02+02:00</Time>
+      <Time>2012-11-23T11:41:22.3391341+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Tressures\Treasure1.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Treasure1.xnb</Output>
-      <Time>2012-04-19T10:44:16+02:00</Time>
+      <Time>2012-11-23T11:41:22.3631354+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Tressures\Treasure2.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Treasure2.xnb</Output>
-      <Time>2012-04-19T10:43:04+02:00</Time>
+      <Time>2012-11-23T11:41:22.3661356+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Tressures\Potion.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Potion.xnb</Output>
-      <Time>2012-04-19T10:40:48+02:00</Time>
+      <Time>2012-11-23T11:41:22.3581352+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Tressures\Scarab.png</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Tressures\Scarab.xnb</Output>
-      <Time>2012-04-19T10:46:08+02:00</Time>
+      <Time>2012-11-23T11:41:22.3601353+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Blocks\Door.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Blocks\Door.xnb</Output>
-      <Time>2012-03-08T09:16:56+01:00</Time>
+      <Time>2012-11-23T11:41:22.3421342+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Panel\Panel.png</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Panel\Panel.xnb</Output>
-      <Time>2012-04-12T15:54:40+02:00</Time>
+      <Time>2012-11-23T11:41:22.355135+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Panel\Lives.png</Source>
@@ -179,7 +179,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Panel\Lives.xnb</Output>
-      <Time>2012-04-12T16:08:44+02:00</Time>
+      <Time>2012-11-23T11:41:22.3521348+01:00</Time>
     </Item>
     <Item>
       <Source>PlayScene\Fonts\Pfont.spritefont</Source>
@@ -188,7 +188,34 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Fonts\Pfont.xnb</Output>
-      <Time>2012-11-23T11:02:25.9194985+01:00</Time>
+      <Time>2012-11-23T11:41:22.3491346+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Badguys\Beetle.png</Source>
+      <Name>PlayScene\Badguys\Beetle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Badguys\Beetle.xnb</Output>
+      <Time>2012-02-02T16:33:02+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Badguys\Mummy.png</Source>
+      <Name>PlayScene\Badguys\Mummy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Badguys\Mummy.xnb</Output>
+      <Time>2012-02-02T16:37:40+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Badguys\Scorpion.png</Source>
+      <Name>PlayScene\Badguys\Scorpion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Badguys\Scorpion.xnb</Output>
+      <Time>2012-02-02T16:35:14+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
