@@ -11,10 +11,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class AnimatingSprite
+    public abstract class AnimatingSprite
     {
         //fields
-        private Beetle beetle;
+        private IAnimatingSprite animatingSprite;
         private int[] xValue = { 0, 32, 64, 96 };
         private int i = 0;
         private float timer;
@@ -22,15 +22,15 @@ namespace PyramidPanic
 
 
         //constructor
-       public AnimatingSprite(Beetle beetle)
+       public AnimatingSprite(IAnimatingSprite animatingSprite)
         {
-            this.beetle = beetle;
+            this.animatingSprite = animatingSprite;
             this.rotation = (float)Math.PI;
             
         }
 
         //Update
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             Console.WriteLine(this.timer);
@@ -46,9 +46,9 @@ namespace PyramidPanic
             }
         }
 
-        public void Draw(GameTime gameTime)
+        public virtual void Draw(GameTime gameTime)
         {
-            this.beetle.Game.SpriteBatch.Draw(this.beetle.Texture, this.beetle.Rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),
+            this.animatingSprite.Game.SpriteBatch.Draw(this.animatingSprite.Texture, this.animatingSprite.Rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),
                                             Color.White, this.rotation, new Vector2(16f, 16f), SpriteEffects.None, 0);
 
            

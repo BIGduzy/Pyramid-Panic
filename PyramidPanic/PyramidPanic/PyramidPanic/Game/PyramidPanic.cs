@@ -71,7 +71,7 @@ namespace PyramidPanic
           
         }
 
-       
+
         protected override void Update(GameTime gameTime)
         {
 

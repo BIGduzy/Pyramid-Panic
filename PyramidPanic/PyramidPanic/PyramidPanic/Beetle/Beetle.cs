@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class Beetle
+    public class Beetle : IAnimatingSprite
     {
         //fields
         private PyramidPanic game;

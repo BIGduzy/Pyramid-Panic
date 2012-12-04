@@ -115,6 +115,7 @@
     <Compile Include="Beetle\Beetle.cs" />
     <Compile Include="Beetle\WalkDown.cs" />
     <Compile Include="Beetle\WalkUp.cs" />
+    <Compile Include="IAnimatingSprite.cs" />
     <Compile Include="Scorpion\Walkleft.cs" />
     <Compile Include="Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\LevelEditorScene\LevelEditorScene.cs" />

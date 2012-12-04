@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class WalkLeft : IScorpion
+    public class WalkLeft : AnimatingSprite, IScorpion
     {
         //fields
         private Scorpion scorpion;
@@ -21,38 +21,26 @@ namespace PyramidPanic
 
 
         //constructor
-        public WalkLeft(Scorpion scorpion)
+        public WalkLeft(Scorpion scorpion) : base(scorpion)
         {
             this.scorpion = scorpion;
+            this.rotation = (float)Math.PI;
         }
 
         //update
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             this.scorpion.Position += new Vector2(-this.scorpion.Speed, 0f);
             if (this.scorpion.Position.X < 32)
             {
                 this.scorpion.State = new WalkRight(this.scorpion);
             }
-
-            this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Console.WriteLine(this.timer);
-            if (this.timer > 1f / 10f)
-            {
-                this.timer = 0;
-                this.i++;
-                if (i > 2)
-                {
-                    this.i = 0;
-                }
-
-            }
+            base.Update(gameTime);
         }
 
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
-            this.scorpion.Game.SpriteBatch.Draw(this.scorpion.Texture, this.scorpion.Rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),
-                                            Color.White, (float)Math.PI, new Vector2(16f,16), SpriteEffects.None, 0);
+            base.Draw(gameTime);
         }
     }
 }

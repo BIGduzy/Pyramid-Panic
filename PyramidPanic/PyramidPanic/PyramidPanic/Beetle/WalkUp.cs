@@ -24,7 +24,7 @@ namespace PyramidPanic
         }
 
         //update
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             this.beetle.Position += new Vector2(0f,this.beetle.Speed);
             if (this.beetle.Position.Y > 400)
@@ -35,7 +35,7 @@ namespace PyramidPanic
 
         }
 
-        public void Draw(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
         }
