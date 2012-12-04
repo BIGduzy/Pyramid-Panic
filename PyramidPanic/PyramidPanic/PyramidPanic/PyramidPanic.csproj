@@ -110,6 +110,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimatingSprite\AnimatingSprite.cs" />
+    <Compile Include="Beetle\IBeetle.cs" />
+    <Compile Include="Beetle\Beetle.cs" />
+    <Compile Include="Beetle\WalkDown.cs" />
+    <Compile Include="Beetle\WalkUp.cs" />
     <Compile Include="Scorpion\Walkleft.cs" />
     <Compile Include="Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\LevelEditorScene\LevelEditorScene.cs" />

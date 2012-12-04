@@ -22,10 +22,13 @@ namespace PyramidPanic
        private List<string> lines;
        private Block[,] blocks;
        private Scorpion scorpion;
+       private Beetle beetle;
        private const int GRIDWIDTH = 32;
        private const int GRIDHEIGHT = 32;
        private Picture background;
        private List<Picture> tressures;
+       private List<Scorpion> scorpions;
+       private List<Beetle> beetles;
        private Panel panel;
 
 
@@ -41,6 +44,8 @@ namespace PyramidPanic
        private void LoadAssets()
        {
            this.tressures = new List<Picture>();
+           this.scorpions = new List<Scorpion>();
+           this.beetles = new List<Beetle>();
            this.panel = new Panel(this.game, new Vector2(0f, 448f));
            this.lines = new List<string>();
            StreamReader reader = new StreamReader(this.levelPath);
@@ -94,8 +99,12 @@ namespace PyramidPanic
                    this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Scarab", new Vector2(x, y)));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'd');
 
+               case 'r':
+                   this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 4));
+                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'r');
+
                case 's':
-                   this.scorpion = new Scorpion(this.game, new Vector2(x,y),4);
+                   this.scorpions.Add( new Scorpion(this.game, new Vector2(x,y),4));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 's');
 
                case 'w':
@@ -125,7 +134,17 @@ namespace PyramidPanic
 
        public void Update(GameTime gameTime)
        {
-           this.scorpion.Update(gameTime);
+           foreach (Scorpion scorpions in this.scorpions)
+           {
+
+               scorpions.Update(gameTime);
+           }
+
+           foreach (Beetle beetles in this.beetles)
+           {
+
+               beetles.Update(gameTime);
+           }
        }
 
        public void Draw(GameTime gameTime)
@@ -146,7 +165,16 @@ namespace PyramidPanic
                tressures.Draw(gameTime);
            }
 
-           this.scorpion.Draw(gameTime);
+
+           foreach (Scorpion scorpions in this.scorpions)
+           {
+               scorpions.Draw(gameTime);
+           }
+
+           foreach (Beetle beetles in this.beetles)
+           {
+               beetles.Draw(gameTime);
+           }
        }
 
     }

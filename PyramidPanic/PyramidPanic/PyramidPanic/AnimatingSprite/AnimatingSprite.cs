@@ -11,30 +11,27 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class WalkRight : IScorpion
+    public class AnimatingSprite
     {
         //fields
-        private Scorpion scorpion;
+        private Beetle beetle;
         private int[] xValue = { 0, 32, 64, 96 };
         private int i = 0;
         private float timer;
-        
+        protected float rotation;
 
 
         //constructor
-        public WalkRight(Scorpion scorpion)
+       public AnimatingSprite(Beetle beetle)
         {
-            this.scorpion = scorpion;
+            this.beetle = beetle;
+            this.rotation = (float)Math.PI;
+            
         }
 
-        //update
+        //Update
         public void Update(GameTime gameTime)
         {
-            this.scorpion.Position += new Vector2(this.scorpion.Speed, 0f);
-            if (this.scorpion.Position.X > 576)
-            {
-                this.scorpion.State = new WalkLeft(this.scorpion);
-            }
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             Console.WriteLine(this.timer);
             if (this.timer > 1f / 10f)
@@ -51,8 +48,10 @@ namespace PyramidPanic
 
         public void Draw(GameTime gameTime)
         {
-            this.scorpion.Game.SpriteBatch.Draw(this.scorpion.Texture, this.scorpion.Rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),
-                                            Color.White, 0f, new Vector2(16f,16f), SpriteEffects.None, 0);
+            this.beetle.Game.SpriteBatch.Draw(this.beetle.Texture, this.beetle.Rectangle, new Rectangle(this.xValue[this.i], 0, 32, 32),
+                                            Color.White, this.rotation, new Vector2(16f, 16f), SpriteEffects.None, 0);
+
+           
         }
     }
 }
