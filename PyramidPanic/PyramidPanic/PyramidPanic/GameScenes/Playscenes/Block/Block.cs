@@ -20,6 +20,13 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private Vector2 position;
         private char charItem;
+        private BlockColision blockColision;
+
+        //properties
+        public BlockColision BlockColision
+        {
+            get { return this.blockColision; }
+        }
 
 
         //constructor
@@ -31,7 +38,7 @@ namespace PyramidPanic
             this.rectangle = new Rectangle((int)position.Y, (int)position.X, this.texture.Width, this.texture.Height);
             this.position = position;
             this.charItem = charItem;
-
+            this.blockColision = blockColision;
         }
 
         public void Draw(GameTime gameTime)

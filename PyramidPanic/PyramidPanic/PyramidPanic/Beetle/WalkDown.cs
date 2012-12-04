@@ -26,8 +26,8 @@ namespace PyramidPanic
         //update
         public override void Update(GameTime gameTime)
         {
-            this.beetle.Position += new Vector2(0f, -this.beetle.Speed);
-            if (this.beetle.Position.Y < 32)
+            this.beetle.Position -= new Vector2(0f, this.beetle.Speed);
+            if (this.beetle.Position.Y < this.beetle.Top)
             {
                 this.beetle.State = new WalkUp(this.beetle);
             }

@@ -20,9 +20,21 @@ namespace PyramidPanic
         private Rectangle rectangle;
         private IBeetle state;
         private float speed;
+        private float top,bot;
        
        
         //properties
+        public float Top
+        {
+            get { return this.top; }
+            set { this.top = value; }
+        }
+        public float Bot
+        {
+            get { return this.bot; }
+            set { this.bot = value; }
+        }
+
         public Vector2 Position
         {
             get { return this.position; }

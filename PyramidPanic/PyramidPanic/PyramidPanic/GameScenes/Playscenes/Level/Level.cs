@@ -31,6 +31,16 @@ namespace PyramidPanic
        private List<Beetle> beetles;
        private Panel panel;
 
+       //properties
+       public List<Beetle> Beetles
+       {
+           get {return this.beetles ;}
+       }
+       public Block[,] Blocks
+       {
+           get { return this.blocks; }
+       }
+
 
        //constructor
        public Level(PyramidPanic game, int levelIndex)
@@ -74,7 +84,7 @@ namespace PyramidPanic
                }
 
            }
-
+           BeetleManager.Level = this;
            
        }
 
