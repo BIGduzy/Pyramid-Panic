@@ -111,14 +111,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatingSprite\AnimatingSprite.cs" />
-    <Compile Include="Beetle\BeetleManager.cs" />
-    <Compile Include="Beetle\IBeetle.cs" />
-    <Compile Include="Beetle\Beetle.cs" />
-    <Compile Include="Beetle\WalkDown.cs" />
-    <Compile Include="Beetle\WalkUp.cs" />
+    <Compile Include="GameScenes\Playscenes\Beetle\BeetleManager.cs" />
+    <Compile Include="GameScenes\Playscenes\Beetle\IBeetle.cs" />
+    <Compile Include="GameScenes\Playscenes\Beetle\Beetle.cs" />
+    <Compile Include="GameScenes\Playscenes\Beetle\WalkDown.cs" />
+    <Compile Include="GameScenes\Playscenes\Beetle\WalkUp.cs" />
     <Compile Include="AnimatingSprite\IAnimatingSprite.cs" />
-    <Compile Include="Scorpion\Walkleft.cs" />
-    <Compile Include="Scorpion\Scorpion.cs" />
+    <Compile Include="GameScenes\Playscenes\Scorpion\ScorpionManager.cs" />
+    <Compile Include="GameScenes\Playscenes\Scorpion\Walkleft.cs" />
+    <Compile Include="GameScenes\Playscenes\Scorpion\Scorpion.cs" />
     <Compile Include="GameScenes\LevelEditorScene\LevelEditorScene.cs" />
     <Compile Include="GameScenes\Playscenes\Block\Block.cs" />
     <Compile Include="GameScenes\Playscenes\Level\Level.cs" />
@@ -132,12 +133,12 @@
     <Compile Include="Input\Input.cs" />
     <Compile Include="GameScenes\Playscenes\PlayScene.cs" />
     <Compile Include="GameScenes\LoadScene\LoadScene.cs" />
-    <Compile Include="Scorpion\IScorpion.cs" />
+    <Compile Include="GameScenes\Playscenes\Scorpion\IScorpion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Game\PyramidPanic.cs" />
     <Compile Include="GameScenes\StartScene\StartScene.cs" />
-    <Compile Include="Scorpion\Walkright.cs" />
+    <Compile Include="GameScenes\Playscenes\Scorpion\Walkright.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
