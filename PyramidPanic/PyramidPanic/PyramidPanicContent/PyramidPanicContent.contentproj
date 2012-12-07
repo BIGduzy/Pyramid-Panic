@@ -63,10 +63,6 @@
       <Name>0</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="PlayScene\Levels\1.txt">
-      <Name>1</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buttons\Button_help.png">
@@ -176,7 +172,23 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="PlayScene\Player\Explorer.png">
+      <Name>Explorer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="PlayScene\Player\explorer_down.png">
+      <Name>explorer_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="PlayScene\Player\expvierkant.png">
+      <Name>expvierkant</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="PlayScene\Badguys\Beetle.png">
       <Name>Beetle</Name>
@@ -193,6 +205,12 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlayScene\Levels\1.txt">
+      <Name>1</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,32 +11,25 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class WalkRight : AnimatingSprite,IScorpion
+    public class PlayerRight:AnimatingSprite
     {
-        //fields
-        private Scorpion scorpion;
- 
-        
-
+        //fields 
+        private Player player;
 
         //constructor
-        public WalkRight(Scorpion scorpion) : base(scorpion)
+        public PlayerRight(Player player):base(player)
         {
-            this.scorpion = scorpion;
-            this.rotation = 0f;
+            this.player = player;
         }
 
-        //update
+        //Update
         public override void Update(GameTime gameTime)
         {
-            this.scorpion.Position += new Vector2(this.scorpion.Speed, 0f);
-            if (this.scorpion.Position.X > 576)
-            {
-                this.scorpion.State = new WalkLeft(this.scorpion);
-            }
+            this.player.Position += new Vector2(this.player.Speed, 0f);
             base.Update(gameTime);
         }
 
+        //Draw
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);

@@ -18,6 +18,9 @@ Content\PlayScene\Tressures\Treasure2.xnb
 Content\PlayScene\Blocks\Door.xnb
 Content\PlayScene\Panel\Panel.xnb
 Content\PlayScene\Panel\Lives.xnb
+Content\PlayScene\Player\Explorer.xnb
+Content\PlayScene\Player\explorer_down.xnb
+Content\PlayScene\Player\expvierkant.xnb
 Content\PlayScene\Badguys\Beetle.xnb
 Content\PlayScene\Badguys\Mummy.xnb
 Content\PlayScene\Badguys\Scorpion.xnb

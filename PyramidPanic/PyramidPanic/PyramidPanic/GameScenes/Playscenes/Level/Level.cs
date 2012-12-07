@@ -30,6 +30,7 @@ namespace PyramidPanic
        private List<Scorpion> scorpions;
        private List<Beetle> beetles;
        private Panel panel;
+       private Player player;
 
        //properties
        public List<Beetle> Beetles
@@ -133,6 +134,10 @@ namespace PyramidPanic
 
                case 'z':
                    return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'y');
+
+               case 'P':
+                   this.player = new Player(this.game,new Vector2(x,y),2.0f);
+                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'P');
                    
                case '.':
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, '.');
@@ -160,6 +165,7 @@ namespace PyramidPanic
 
                beetles.Update(gameTime);
            }
+           this.player.Update(gameTime);
        }
 
        public void Draw(GameTime gameTime)
@@ -190,6 +196,12 @@ namespace PyramidPanic
            {
                beetles.Draw(gameTime);
            }
+
+           if (this.player != null)
+           { this.player.Draw(gameTime); }
+
+
+
        }
 
     }

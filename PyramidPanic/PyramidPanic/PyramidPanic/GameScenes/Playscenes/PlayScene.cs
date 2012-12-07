@@ -16,7 +16,8 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Level level;
-        private int levelNumber = 0;
+        private int levelNumber = 1;
+
 
         //constructor
         public PlayScene(PyramidPanic game)

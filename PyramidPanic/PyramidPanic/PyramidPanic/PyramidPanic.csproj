@@ -117,6 +117,8 @@
     <Compile Include="GameScenes\Playscenes\Beetle\WalkDown.cs" />
     <Compile Include="GameScenes\Playscenes\Beetle\WalkUp.cs" />
     <Compile Include="AnimatingSprite\IAnimatingSprite.cs" />
+    <Compile Include="GameScenes\Playscenes\Player\Player.cs" />
+    <Compile Include="GameScenes\Playscenes\Player\PlayerRight.cs" />
     <Compile Include="GameScenes\Playscenes\Scorpion\ScorpionManager.cs" />
     <Compile Include="GameScenes\Playscenes\Scorpion\Walkleft.cs" />
     <Compile Include="GameScenes\Playscenes\Scorpion\Scorpion.cs" />
