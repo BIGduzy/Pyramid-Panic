@@ -26,14 +26,14 @@ namespace PyramidPanic
         {
             this.animatingSprite = animatingSprite;
             this.rotation = 0f;
-            
         }
+
 
         //Update
         public virtual void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Console.WriteLine(this.timer);
+            
             if (this.timer > 1f / 10f)
             {
                 this.timer = 0;

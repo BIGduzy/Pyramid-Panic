@@ -25,6 +25,13 @@ namespace PyramidPanic
             this.i = 1;
         }
 
+        public PlayerIdle(Player player, float rotation): base(player)
+        {
+            this.player = player;
+            this.rotation = rotation;
+            this.i = 1;
+        }
+
         //Update
         public override void Update(GameTime gameTime)
         {

@@ -30,7 +30,14 @@ namespace PyramidPanic
 
             if (Input.DetectKeyUp(Keys.S))
             {
-                this.player.State = new PlayerIdle(this.player);
+                float modulo = this.player.Position.Y % 32;
+
+                if (modulo >= (32f - this.player.Speed))
+                {
+                    int Geheel = (int)this.player.Position.Y / 32;
+                    this.player.Position = new Vector2(this.player.Position.X, (Geheel + 1) * 32);
+                    this.player.State = new PlayerIdle(this.player, (float)Math.PI / 2);
+                }
             }
 
             base.Update(gameTime);

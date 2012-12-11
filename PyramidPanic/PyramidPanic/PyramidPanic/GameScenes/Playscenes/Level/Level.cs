@@ -136,7 +136,7 @@ namespace PyramidPanic
                    return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'y');
 
                case 'P':
-                   this.player = new Player(this.game,new Vector2(x,y),2.0f);
+                   this.player = new Player(this.game,new Vector2(x,y),3.0f);
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'P');
                    
                case '.':
