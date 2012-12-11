@@ -11,24 +11,24 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class PlayerRight:AnimatingSprite
+    public class PlayerUp:AnimatingSprite
     {
         //fields 
         private Player player;
 
         //constructor
-        public PlayerRight(Player player):base(player)
+        public PlayerUp(Player player):base(player)
         {
             this.player = player;
-            this.rotation = 0f;
+            this.rotation = (float)Math.PI*(float)1.5;
         }
 
         //Update
         public override void Update(GameTime gameTime)
         {
-            this.player.Position += new Vector2(this.player.Speed, 0f);
+            this.player.Position -= new Vector2(0f,this.player.Speed);
 
-            if (Input.DetectKeyUp(Keys.D))
+            if (Input.DetectKeyUp(Keys.W))
             {
                 this.player.State = new PlayerIdle(this.player);
             }

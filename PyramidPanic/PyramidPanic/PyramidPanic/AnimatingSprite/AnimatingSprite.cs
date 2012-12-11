@@ -16,7 +16,7 @@ namespace PyramidPanic
         //fields
         private IAnimatingSprite animatingSprite;
         private int[] xValue = { 0, 32, 64, 96 };
-        private int i = 0;
+        protected int i = 0;
         private float timer;
         protected float rotation;
 
@@ -25,7 +25,7 @@ namespace PyramidPanic
        public AnimatingSprite(IAnimatingSprite animatingSprite)
         {
             this.animatingSprite = animatingSprite;
-            this.rotation = (float)Math.PI;
+            this.rotation = 0f;
             
         }
 

@@ -42,6 +42,12 @@ namespace PyramidPanic
             return ks.IsKeyDown(key);
         }
 
+        //levelDetecter voor loslaten
+        public static bool DetectKeyUp(Keys key)
+        {
+            return ks.IsKeyUp(key);
+        }
+
         //edgedecet voor de toetsenknoppen
         public static bool EdgeDetectKeyDown(Keys key)
         {
