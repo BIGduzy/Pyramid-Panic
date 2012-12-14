@@ -1,7 +1,7 @@
 @xzxzxxzzxzxxxxzzzxx
 zr................rz
 z.r..............r.x
-x..r.....P......r..z
+x..r...x.P..z...r..z
 x...r..........r...z
 x....r.wwwwww.r....x
 x.....rwcaacwr.....x

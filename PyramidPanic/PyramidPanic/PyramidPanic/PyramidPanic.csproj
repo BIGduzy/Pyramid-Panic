@@ -118,6 +118,7 @@
     <Compile Include="GameScenes\Playscenes\Beetle\WalkUp.cs" />
     <Compile Include="AnimatingSprite\IAnimatingSprite.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerDown.cs" />
+    <Compile Include="GameScenes\Playscenes\Player\Playermanager.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerUp.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerLeft.cs" />
     <Compile Include="GameScenes\Playscenes\Player\Player.cs" />

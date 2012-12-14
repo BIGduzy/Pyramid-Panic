@@ -28,6 +28,11 @@ namespace PyramidPanic
             get { return this.blockColision; }
         }
 
+        public Rectangle Rectangle
+        {
+            get {return this.rectangle ;}
+        }
+
 
         //constructor
         public Block(PyramidPanic game,string blockName, Vector2 position, BlockColision blockColision, char charItem)
@@ -35,7 +40,7 @@ namespace PyramidPanic
             this.game = game;
             
             this.texture = game.Content.Load<Texture2D>(@"PlayScene\Blocks\"+blockName);
-            this.rectangle = new Rectangle((int)position.Y, (int)position.X, this.texture.Width, this.texture.Height);
+            this.rectangle = new Rectangle((int)position.X, (int)position.Y, this.texture.Width, this.texture.Height);
             this.position = position;
             this.charItem = charItem;
             this.blockColision = blockColision;

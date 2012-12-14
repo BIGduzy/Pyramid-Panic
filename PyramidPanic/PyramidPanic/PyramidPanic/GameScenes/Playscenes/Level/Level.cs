@@ -91,6 +91,7 @@ namespace PyramidPanic
            }
            BeetleManager.Level = this;
            ScorpionManager.Level = this;
+           Playermanager.Level = this;
            
        }
 
@@ -144,7 +145,7 @@ namespace PyramidPanic
 
                 case '@':
                    this.background = new Picture(this.game, @"PlayScene\Background\Background2",new Vector2(x,y));
-                   return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Pas, '@');
+                   return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, '@');
                    
                default:
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, '.');

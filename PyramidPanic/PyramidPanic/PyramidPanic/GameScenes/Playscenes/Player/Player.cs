@@ -16,7 +16,7 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Texture2D texture;
-        private Rectangle rectangle;
+        private Rectangle rectangle,collisionRec;
         private Vector2 position;
         private float speed;
         private AnimatingSprite state;
@@ -38,6 +38,11 @@ namespace PyramidPanic
             get { return this.rectangle; }
         }
 
+        public Rectangle CollisionRec
+        {
+            get { return this.collisionRec; }
+        }
+
         public Texture2D Texture
         {
             get { return this.texture; }
@@ -51,9 +56,14 @@ namespace PyramidPanic
         public Vector2 Position
         {
             get { return this.position; }
-            set { this.position = value;
+            set
+            {
+                this.position = value;
                 this.rectangle.X = (int)position.X+16;
-                this.rectangle.Y = (int)position.Y+16; }
+                this.rectangle.Y = (int)position.Y+16;
+                this.collisionRec.X = (int)this.position.X;
+                this.collisionRec.Y = (int)this.position.Y;
+            }
         }
 
         public float Speed
@@ -66,24 +76,28 @@ namespace PyramidPanic
         {
             this.game = game;
             this.position = position;
-            this.texture = game.Content.Load<Texture2D>(@"PlayScene\player\Explorer");
-            this.rectangle = new Rectangle((int)position.X+16, (int)position.Y+16, this.texture.Width/4, this.texture.Height);
+            this.texture = this.game.Content.Load<Texture2D>(@"PlayScene\player\Explorer");
+            this.rectangle = new Rectangle((int)position.X + 16, (int)position.Y + 16, this.texture.Width / 4, this.texture.Height);
+            this.collisionRec = new Rectangle((int)position.X, (int)position.Y, 32, 32);
             this.speed = speed;
 
             this.state = new PlayerIdle(this);
         }
 
+        //update
         public void Update(GameTime gameTime)
         {
            
                 this.state.Update(gameTime);
+                Playermanager.Player = this;
         }
 
         //draw
         public void Draw(GameTime gameTime)
         {
-            
+            this.game.SpriteBatch.Draw(this.texture, this.collisionRec, Color.White);
             this.state.Draw(gameTime);
+            
         }
     }
 }
