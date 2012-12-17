@@ -33,19 +33,22 @@ namespace PyramidPanic
                 this.player.Position = new Vector2((Geheel +1) * 32, this.player.Position.Y);
                 if (Input.DetectKeyUp(Keys.A))
                 {
-                    this.player.State = new PlayerIdle(this.player, (float)Math.PI);
+                    this.player.State = this.player.PlayerIdle;
                 }
             }
 
             if (Input.DetectKeyUp(Keys.A))
             {
-                float modulo = this.player.Position.X % 32;
+                float modulo = (this.player.Position.X >=0) ? this.player.Position.X % 32 :32 + this.player.Position.X % 32;
 
                 if (modulo >= (32f - this.player.Speed))
                 {
                     int Geheel = (int)this.player.Position.X / 32;
-                    this.player.Position = new Vector2((Geheel + 1) * 32, this.player.Position.Y);
-                    this.player.State = new PlayerIdle(this.player, (float)Math.PI);
+
+                    this.player.Position = (this.player.Position.X >= 0) ? new Vector2((Geheel + 1) * 32, this.player.Position.Y) :
+                                                                            new Vector2(Geheel * 32, this.player.Position.Y);
+
+                    this.player.State = this.player.PlayerIdle;
                 }
             }
 

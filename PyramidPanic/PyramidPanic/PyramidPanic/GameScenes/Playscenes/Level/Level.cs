@@ -128,7 +128,7 @@ namespace PyramidPanic
                    return new Block(this.game, @"Block", new Vector2(x,y),BlockColision.Npas,'w');
 
                case 'y':
-                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Npas, 'y');
+                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Pas, 'y');
 
                case 'x':
                    return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, 'x');

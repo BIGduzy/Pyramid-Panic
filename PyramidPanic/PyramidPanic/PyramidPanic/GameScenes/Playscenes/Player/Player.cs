@@ -24,9 +24,35 @@ namespace PyramidPanic
         private int[] xValue = { 0, 32, 64, 96 };
         private int i = 0;
         private float timer;
+        private PlayerUp playerUp;
+        private PlayerDown playerDown;
+        private PlayerRight playerRight;
+        private PlayerLeft playerLeft;
+        private PlayerIdle playerIdle;
         
 
         //properties
+        public PlayerIdle PlayerIdle
+        {
+            get { return this.playerIdle; }
+        }
+        public PlayerLeft PlayerLeft
+        {
+            get { return this.playerLeft; }
+        }
+        public PlayerRight PlayerRight
+        {
+            get { return this.playerRight; }
+        }
+        public PlayerUp PlayerUp
+        {
+            get { return this.playerUp; }
+        }
+        public PlayerDown PlayerDown
+        {
+            get { return this.playerDown; }
+        }
+
         public AnimatingSprite State
         {
             get { return this.state; }
@@ -80,7 +106,11 @@ namespace PyramidPanic
             this.rectangle = new Rectangle((int)position.X + 16, (int)position.Y + 16, this.texture.Width / 4, this.texture.Height);
             this.collisionRec = new Rectangle((int)position.X, (int)position.Y, 32, 32);
             this.speed = speed;
-
+            this.playerLeft = new PlayerLeft(this);
+            this.playerRight = new PlayerRight(this);
+            this.playerDown = new PlayerDown(this);
+            this.playerUp = new PlayerUp(this);
+            this.playerIdle = new PlayerIdle(this);
             this.state = new PlayerIdle(this);
         }
 

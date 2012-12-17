@@ -21,9 +21,20 @@ namespace PyramidPanic
         private IScorpion state;
         private float speed;
         private float right, left;
+        private WalkLeft walkLeft;
+        private WalkRight walkRight;
        
        
         //properties
+        public WalkRight WalkRight
+        {
+            get {return this.walkRight ;}
+        }
+        public WalkLeft WalkLeft
+        {
+            get { return this.walkLeft; }
+        }
+
         public float Right
         {
             get { return this.right; }
@@ -78,8 +89,10 @@ namespace PyramidPanic
             this.position = position;
             this.texture = game.Content.Load<Texture2D>(@"PlayScene\Badguys\Scorpion");
             this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y,this.texture.Width/4,this.texture.Height);
-            this.state = new WalkRight(this);
             this.speed = speed;
+            this.walkLeft = new WalkLeft(this);
+            this.walkRight = new WalkRight(this);
+            this.state = this.walkRight;
 
         }
 

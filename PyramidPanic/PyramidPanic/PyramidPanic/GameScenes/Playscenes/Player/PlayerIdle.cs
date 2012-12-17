@@ -37,19 +37,19 @@ namespace PyramidPanic
         {
             if (Input.DetectKeyDown(Keys.D))
             {
-                this.player.State = new PlayerRight(this.player);
+                this.player.State = this.player.PlayerRight;
             }
             if (Input.DetectKeyDown(Keys.A))
             {
-                this.player.State = new PlayerLeft(this.player);
+                this.player.State = this.player.PlayerLeft;
             }
             if (Input.DetectKeyDown(Keys.W))
             {
-                this.player.State = new PlayerUp(this.player);
+                this.player.State = this.player.PlayerUp;
             }
             if (Input.DetectKeyDown(Keys.S))
             {
-                this.player.State = new PlayerDown(this.player);
+                this.player.State = this.player.PlayerDown;
             }
             //base.Update(gameTime);
         }

@@ -29,7 +29,7 @@ namespace PyramidPanic
             this.beetle.Position += new Vector2(0f,this.beetle.Speed);
             if (this.beetle.Position.Y > beetle.Bot)
             {
-                this.beetle.State = new WalkDown(this.beetle);
+                this.beetle.State = this.beetle.WalkDown;
             }
             base.Update(gameTime);
 
