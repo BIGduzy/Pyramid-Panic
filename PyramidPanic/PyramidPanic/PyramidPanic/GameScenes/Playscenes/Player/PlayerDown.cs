@@ -27,6 +27,15 @@ namespace PyramidPanic
         public override void Update(GameTime gameTime)
         {
             this.player.Position += new Vector2(0f,this.player.Speed);
+            if (Playermanager.CollisionDetectionWalls())
+            {
+                int Geheel = (int)this.player.Position.Y / 32;
+                this.player.Position = new Vector2(this.player.Position.X, Geheel * 32);
+                if (Input.DetectKeyUp(Keys.S))
+                {
+                    this.player.State = new PlayerIdle(this.player, (float)Math.PI/2);
+                }
+            }
 
             if (Input.DetectKeyUp(Keys.S))
             {
