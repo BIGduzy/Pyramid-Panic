@@ -33,7 +33,7 @@ namespace PyramidPanic
                 this.player.Position = (this.player.Position.X >= 0) ? new Vector2((Geheel) * 32, this.player.Position.Y) : new Vector2((Geheel-1) * 32, this.player.Position.Y);
                 if (Input.DetectKeyUp(Keys.D))
                 {
-                    this.player.State = this.player.PlayerIdle;
+                    this.player.State = new PlayerIdle(this.player, this.rotation);
                 }
             }
 
@@ -45,7 +45,7 @@ namespace PyramidPanic
               {
                 int Geheel = (int)this.player.Position.X / 32;
                 this.player.Position = (this.player.Position.X >= 0) ? new Vector2((Geheel + 1) * 32, this.player.Position.Y) : new Vector2((Geheel) * 32, this.player.Position.Y);
-                this.player.State = this.player.PlayerIdle;
+                this.player.State = new PlayerIdle(this.player, this.rotation);
               }
 
 

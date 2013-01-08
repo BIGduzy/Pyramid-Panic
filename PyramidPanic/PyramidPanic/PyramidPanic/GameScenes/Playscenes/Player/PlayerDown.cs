@@ -33,19 +33,23 @@ namespace PyramidPanic
                 this.player.Position = (this.player.Position.Y >= 0) ? new Vector2(this.player.Position.X, Geheel * 32) : new Vector2(this.player.Position.X, (Geheel - 1) * 32);
                 if (Input.DetectKeyUp(Keys.S))
                 {
-                    this.player.State = this.player.PlayerIdle;
+                    this.player.State = new PlayerIdle(this.player, this.rotation);
                 }
             }
 
+            //Blijf op het grid
             if (Input.DetectKeyUp(Keys.S))
             {
-                float modulo = (this.player.Position.Y >= 0) ? this.player.Position.Y % 32 : 32 + this.player.Position.Y % 32;
-
+                float modulo = (this.player.Position.Y >= 0) ?
+                                this.player.Position.Y % 32 :
+                                32 + this.player.Position.Y % 32;
                 if (modulo >= (32f - this.player.Speed))
                 {
-                    int Geheel = (int)this.player.Position.Y / 32;
-                    this.player.Position = (this.player.Position.Y >= 0) ? new Vector2(this.player.Position.X, (Geheel+1) * 32) : new Vector2(this.player.Position.X, (Geheel) * 32);
-                    this.player.State = this.player.PlayerIdle;
+                    int geheelAantalmalen32 = (int)this.player.Position.Y / 32;
+                    this.player.Position = (this.player.Position.Y >= 0) ?
+                        new Vector2(this.player.Position.X, (geheelAantalmalen32 + 1) * 32) :
+                        new Vector2(this.player.Position.X, (geheelAantalmalen32) * 32);
+                    this.player.State = new PlayerIdle(this.player, this.rotation);
                 }
             }
 

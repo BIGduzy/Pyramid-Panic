@@ -146,6 +146,8 @@
     <Compile Include="Game\PyramidPanic.cs" />
     <Compile Include="GameScenes\StartScene\StartScene.cs" />
     <Compile Include="GameScenes\Playscenes\Scorpion\Walkright.cs" />
+    <Compile Include="GameScenes\Score\Score.cs" />
+    <Compile Include="Treasure.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

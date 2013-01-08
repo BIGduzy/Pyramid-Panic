@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    class Picture
+    public class Picture
     {
         //fields
         private Texture2D texture;

@@ -51,9 +51,9 @@ namespace PyramidPanic
                 picture.Draw(gameTime);
             }
 
-            this.game.SpriteBatch.DrawString(this.font, "3",this.position + new Vector2(3.6f*32f,-2f),Color.Goldenrod);
-            this.game.SpriteBatch.DrawString(this.font, "0", this.position + new Vector2(8.6f * 32f, -2f), Color.Goldenrod);
-            this.game.SpriteBatch.DrawString(this.font, "0", this.position + new Vector2(16.6f * 32f, -2f), Color.Goldenrod);
+            this.game.SpriteBatch.DrawString(this.font, Score.Lives.ToString(),this.position + new Vector2(3.6f*32f,-2f),Color.Goldenrod);
+            this.game.SpriteBatch.DrawString(this.font, Score.Scarab.ToString(), this.position + new Vector2(8.6f * 32f, -2f), Color.Goldenrod);
+            this.game.SpriteBatch.DrawString(this.font, Score.Points.ToString(), this.position + new Vector2(16.6f * 32f, -2f), Color.Goldenrod);
         }
 
 

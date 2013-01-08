@@ -20,15 +20,15 @@ namespace PyramidPanic
         private Vector2 position;
         private float speed;
         private AnimatingSprite state;
-        //timer
-        private int[] xValue = { 0, 32, 64, 96 };
-        private int i = 0;
-        private float timer;
         private PlayerUp playerUp;
         private PlayerDown playerDown;
         private PlayerRight playerRight;
         private PlayerLeft playerLeft;
         private PlayerIdle playerIdle;
+        //timer
+        private int[] xValue = { 0, 32, 64, 96 };
+        private int i = 0;
+        private float timer;
         
 
         //properties
@@ -111,7 +111,7 @@ namespace PyramidPanic
             this.playerDown = new PlayerDown(this);
             this.playerUp = new PlayerUp(this);
             this.playerIdle = new PlayerIdle(this);
-            this.state = new PlayerIdle(this);
+            this.state = new PlayerIdle(this,0);
         }
 
         //update
@@ -120,6 +120,9 @@ namespace PyramidPanic
            
                 this.state.Update(gameTime);
                 Playermanager.Player = this;
+                Playermanager.CollisionDetectTreasures();
+                Playermanager.CollisionDetectScorpions();
+                Playermanager.CollisionDetectBeetles();
         }
 
         //draw

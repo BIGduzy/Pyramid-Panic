@@ -50,5 +50,62 @@ namespace PyramidPanic
             }
             return false;
         }
+
+        public static void CollisionDetectTreasures()
+        {
+            foreach (Treasure treasure in level.Treasures)
+            {
+                if (player.CollisionRec.Intersects(treasure.Rectangle))
+                {
+                    switch (treasure.Character)
+                    {
+
+                        case 'a':
+                            Score.Points += 10;
+                            break;
+                        case 'b':
+                            Score.Points += 100;
+                            break;
+                        case 'c':
+                            Score.Lives += 1;
+                            break;
+                        case 'd':
+                            Score.Points += 50;
+                            Score.Scarab += 1;
+                            break;
+                    }
+                    level.Treasures.Remove(treasure);
+                    break;
+                }
+                
+            }
+
+        }
+
+        public static void CollisionDetectScorpions()
+        {
+            foreach (Scorpion scorpion in level.Scorpions)
+            {
+                if (player.CollisionRec.Intersects(scorpion.Collisionrec))
+                {
+                    Score.Lives -= 1;
+                    level.Scorpions.Remove(scorpion);
+                    break;
+                }
+            }
+        }
+
+        public static void CollisionDetectBeetles()
+        {
+            foreach (Beetle beetle in level.Beetles)
+            {
+                if (player.CollisionRec.Intersects(beetle.Collisionrec))
+                {
+                    Score.Lives -= 1;
+                    level.Beetles.Remove(beetle);
+                    break;
+                }
+            }
+        }
     }
 }

@@ -26,13 +26,19 @@ namespace PyramidPanic
        private const int GRIDWIDTH = 32;
        private const int GRIDHEIGHT = 32;
        private Picture background;
-       private List<Picture> tressures;
+       private List<Picture> treasures;
        private List<Scorpion> scorpions;
        private List<Beetle> beetles;
        private Panel panel;
        private Player player;
 
        //properties
+       public List<Picture> Treasures
+       {
+           get { return this.treasures; }
+           set { this.treasures = value; }
+       }
+
        public List<Beetle> Beetles
        {
            get {return this.beetles ;}
@@ -54,11 +60,13 @@ namespace PyramidPanic
            this.levelPath = @"Content\PlayScene\Levels\0.txt";
            this.LoadAssets();
 
+           Score.Initialize();
+
        }
 
        private void LoadAssets()
        {
-           this.tressures = new List<Picture>();
+           this.treasures = new List<Picture>();
            this.scorpions = new List<Scorpion>();
            this.beetles = new List<Beetle>();
            this.panel = new Panel(this.game, new Vector2(0f, 448f));
@@ -100,20 +108,20 @@ namespace PyramidPanic
            switch (blockElement)
            {
                case 'a':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Treasure1",new Vector2(x,y)));
+                   this.treasures.Add(new Treasure('a',this.game, @"PlayScene\Tressures\Treasure1",new Vector2(x,y)));
                    return new Block(this.game, @"Transparant", new Vector2(x,y), BlockColision.Pas, 'a');
                    
 
                case 'b':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Treasure2", new Vector2(x, y)));
+                   this.treasures.Add(new Treasure('b',this.game, @"PlayScene\Tressures\Treasure2", new Vector2(x, y)));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'b');
 
                case 'c':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Potion", new Vector2(x, y)));
+                   this.treasures.Add(new Treasure('c',this.game, @"PlayScene\Tressures\Potion", new Vector2(x, y)));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'c');
 
                case 'd':
-                   this.tressures.Add(new Picture(this.game, @"PlayScene\Tressures\Scarab", new Vector2(x, y)));
+                   this.treasures.Add(new Treasure('d',this.game, @"PlayScene\Tressures\Scarab", new Vector2(x, y)));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'd');
 
                case 'r':
@@ -182,7 +190,7 @@ namespace PyramidPanic
                }
            }
 
-           foreach (Picture tressures in this.tressures)
+           foreach (Picture tressures in this.treasures)
            {
                tressures.Draw(gameTime);
            }

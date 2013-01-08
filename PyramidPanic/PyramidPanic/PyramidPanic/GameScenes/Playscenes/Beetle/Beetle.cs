@@ -17,7 +17,7 @@ namespace PyramidPanic
         private PyramidPanic game;
         private Texture2D texture;
         private Vector2 position;
-        private Rectangle rectangle;
+        private Rectangle rectangle,collisionrec;
         private IBeetle state;
         private float speed;
         private float top,bot;
@@ -54,7 +54,9 @@ namespace PyramidPanic
             {
                 this.position = value;
                 this.rectangle.X = (int)this.position.X +16;
-                this.rectangle.Y = (int)this.position.Y +16;
+                this.rectangle.Y = (int)this.position.Y + 16;
+                this.collisionrec.X = (int)this.position.X;
+                this.collisionrec.Y = (int)this.position.Y;
             }
         }
 
@@ -77,6 +79,10 @@ namespace PyramidPanic
         {
             get {return this.rectangle;}
         }
+        public Rectangle Collisionrec
+        {
+            get { return this.collisionrec; }
+        }
 
         public IBeetle State
         {
@@ -91,6 +97,7 @@ namespace PyramidPanic
             this.position = position;
             this.texture = game.Content.Load<Texture2D>(@"PlayScene\Badguys\Beetle");
             this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y,this.texture.Width/4,this.texture.Height);
+            this.collisionrec = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
             this.speed = speed;
             this.walkUp = new WalkUp(this);
             this.walkDown = new WalkDown(this);
