@@ -89,7 +89,10 @@ namespace PyramidPanic
                 if (player.CollisionRec.Intersects(scorpion.Collisionrec))
                 {
                     Score.Lives -= 1;
-                    level.Scorpions.Remove(scorpion);
+                    level.LevelPause.RemoveIdex = level.Scorpions.IndexOf(scorpion);
+                    level.LevelPause.RemoveType = "scorpion";
+                    level.LevelState = new LevelPause(level);
+                    
                     break;
                 }
             }
@@ -102,7 +105,10 @@ namespace PyramidPanic
                 if (player.CollisionRec.Intersects(beetle.Collisionrec))
                 {
                     Score.Lives -= 1;
-                    level.Beetles.Remove(beetle);
+                    level.LevelPause.RemoveIdex = level.Beetles.IndexOf(beetle);
+                    level.LevelPause.RemoveType = "beetle";
+                    level.LevelState = new LevelPause(level);
+                    
                     break;
                 }
             }

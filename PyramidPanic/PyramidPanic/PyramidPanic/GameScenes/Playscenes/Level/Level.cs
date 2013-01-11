@@ -21,8 +21,8 @@ namespace PyramidPanic
        private string levelPath;
        private List<string> lines;
        private Block[,] blocks;
-       private Scorpion scorpion;
-       private Beetle beetle;
+       //private Scorpion scorpion;
+       //private Beetle beetle;
        private const int GRIDWIDTH = 32;
        private const int GRIDHEIGHT = 32;
        private Picture background;
@@ -31,8 +31,21 @@ namespace PyramidPanic
        private List<Beetle> beetles;
        private Panel panel;
        private Player player;
+       private ILevel levelState;
+       private LevelPause levelPause;
+       private LevelPlay levelPlay;
 
        //properties
+       public PyramidPanic Game
+       {
+           get {return this.game ;}
+       }
+
+       public Player Player
+       {
+           get { return this.player;}
+       }
+
        public List<Picture> Treasures
        {
            get { return this.treasures; }
@@ -52,6 +65,25 @@ namespace PyramidPanic
            get { return this.blocks; }
        }
 
+       public LevelPause LevelPause
+       {
+           get{return this.levelPause;}
+           set{ this.levelPause = value;}
+       }
+
+       public ILevel LevelState
+       {
+           get { return this.levelState; }
+           set { this.levelState = value; }
+       }
+
+       public LevelPlay LevelPlay
+       {
+           get { return this.levelPlay; }
+           set { this.levelPlay = value; }
+       }
+
+
 
        //constructor
        public Level(PyramidPanic game, int levelIndex)
@@ -59,8 +91,10 @@ namespace PyramidPanic
            this.game = game;
            this.levelPath = @"Content\PlayScene\Levels\0.txt";
            this.LoadAssets();
-
            Score.Initialize();
+           this.levelPause = new LevelPause(this);
+           this.levelPlay = new LevelPlay(this);
+           this.levelState = this.levelPlay;
 
        }
 
@@ -163,24 +197,13 @@ namespace PyramidPanic
 
        public void Update(GameTime gameTime)
        {
-           foreach (Scorpion scorpions in this.scorpions)
-           {
-
-               scorpions.Update(gameTime);
-           }
-
-           foreach (Beetle beetles in this.beetles)
-           {
-
-               beetles.Update(gameTime);
-           }
-           this.player.Update(gameTime);
+           this.levelState.Update(gameTime);
        }
 
        public void Draw(GameTime gameTime)
        {
            this.background.Draw(gameTime);
-           this.panel.Draw(gameTime);
+           
 
            for (int row = 0; row < this.blocks.GetLength(1); row++)
            {
@@ -209,8 +232,9 @@ namespace PyramidPanic
            if (this.player != null)
            { this.player.Draw(gameTime); }
 
+           this.levelState.Draw(gameTime);
 
-
+           this.panel.Draw(gameTime);
        }
 
     }
