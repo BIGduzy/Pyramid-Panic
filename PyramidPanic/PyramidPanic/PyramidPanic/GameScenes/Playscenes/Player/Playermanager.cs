@@ -31,6 +31,20 @@ namespace PyramidPanic
             set { player = value; }
         }
 
+        public static bool WalkOutOfLevel()
+        {
+            if (player.Position.X > 640)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+           
+        }
+
         //constructor
         public static bool CollisionDetectionWalls()
         {
@@ -74,6 +88,21 @@ namespace PyramidPanic
                             Score.Scarab += 1;
                             break;
                     }
+                    if (Score.openDoor() && Score.DoorsAreClosed)
+                    {
+                        for (int i = 0; i < level.Blocks.GetLength(0); i++)
+                        {
+                            for (int j = 0; j < level.Blocks.GetLength(1); j++)
+                            {
+                                if (level.Blocks[i,j].CharItem == 'y')
+                                {
+                                    level.LevelState = level.LevelDoorOpen;
+                                    level.Blocks[i, j].BlockColision = BlockColision.Pas;
+                                }
+                            }
+                        }
+                        Score.DoorsAreClosed = false;
+                    }
                     level.Treasures.Remove(treasure);
                     break;
                 }
@@ -88,7 +117,7 @@ namespace PyramidPanic
             {
                 if (player.CollisionRec.Intersects(scorpion.Collisionrec))
                 {
-                    Score.Lives -= 1;
+                    Score.Lives --;
                     level.LevelPause.RemoveIdex = level.Scorpions.IndexOf(scorpion);
                     level.LevelPause.RemoveType = "scorpion";
                     level.LevelState = new LevelPause(level);
@@ -104,7 +133,7 @@ namespace PyramidPanic
             {
                 if (player.CollisionRec.Intersects(beetle.Collisionrec))
                 {
-                    Score.Lives -= 1;
+                    Score.Lives --;
                     level.LevelPause.RemoveIdex = level.Beetles.IndexOf(beetle);
                     level.LevelPause.RemoveType = "beetle";
                     level.LevelState = new LevelPause(level);

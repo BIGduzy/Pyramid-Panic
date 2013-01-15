@@ -244,6 +244,24 @@
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Fonts\Pfont.xnb</Output>
       <Time>2012-11-23T11:41:22.3491346+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlayScene\Overlay\DoorOpenOverlay.png</Source>
+      <Name>PlayScene\Overlay\DoorOpenOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Overlay\DoorOpenOverlay.xnb</Output>
+      <Time>2013-01-15T11:21:42.3174358+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Overlay\overlay.png</Source>
+      <Name>PlayScene\Overlay\overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Overlay\overlay.xnb</Output>
+      <Time>2013-01-15T11:22:05.9207859+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

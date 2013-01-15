@@ -34,8 +34,15 @@ namespace PyramidPanic
        private ILevel levelState;
        private LevelPause levelPause;
        private LevelPlay levelPlay;
+       private LevelDoorOpen levelDoorOpen;
 
        //properties
+       public LevelDoorOpen LevelDoorOpen
+       {
+           get { return this.levelDoorOpen; }
+           set { this.levelDoorOpen = value; }
+       }
+
        public PyramidPanic Game
        {
            get {return this.game ;}
@@ -94,6 +101,7 @@ namespace PyramidPanic
            Score.Initialize();
            this.levelPause = new LevelPause(this);
            this.levelPlay = new LevelPlay(this);
+           this.levelDoorOpen = new LevelDoorOpen(this);
            this.levelState = this.levelPlay;
 
        }
@@ -170,7 +178,7 @@ namespace PyramidPanic
                    return new Block(this.game, @"Block", new Vector2(x,y),BlockColision.Npas,'w');
 
                case 'y':
-                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Pas, 'y');
+                   return new Block(this.game, @"Door", new Vector2(x, y), BlockColision.Npas, 'y');
 
                case 'x':
                    return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, 'x');

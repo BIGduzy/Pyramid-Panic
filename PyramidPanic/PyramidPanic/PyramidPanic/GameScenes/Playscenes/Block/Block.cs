@@ -25,12 +25,18 @@ namespace PyramidPanic
         //properties
         public BlockColision BlockColision
         {
-            get { return this.blockColision; }
+            get { return this.blockColision;}
+            set { this.blockColision = value; }
         }
 
         public Rectangle Rectangle
         {
             get {return this.rectangle ;}
+        }
+
+        public char CharItem
+        {
+            get { return this.charItem;}
         }
 
 

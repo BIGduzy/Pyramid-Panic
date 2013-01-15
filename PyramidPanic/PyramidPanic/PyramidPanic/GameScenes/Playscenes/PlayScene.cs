@@ -46,6 +46,15 @@ namespace PyramidPanic
             {
                 this.game.GameState = new StartScene(this.game);
             }
+            if (Score.isDead())
+            {
+                this.game.GameState = new StartScene(this.game);
+            }
+            if (Playermanager.WalkOutOfLevel())
+            {
+                levelNumber++;
+                this.game.GameState = new PlayScene(game);
+            }
             this.level.Update(gameTime);
 
 
