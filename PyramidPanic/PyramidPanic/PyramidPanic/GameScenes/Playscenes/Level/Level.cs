@@ -35,14 +35,10 @@ namespace PyramidPanic
        private LevelPause levelPause;
        private LevelPlay levelPlay;
        private LevelDoorOpen levelDoorOpen;
+       private LevelGameOver levelGameOver;
+       private LevelNextLevel levelNextLevel;
 
        //properties
-       public LevelDoorOpen LevelDoorOpen
-       {
-           get { return this.levelDoorOpen; }
-           set { this.levelDoorOpen = value; }
-       }
-
        public PyramidPanic Game
        {
            get {return this.game ;}
@@ -72,16 +68,16 @@ namespace PyramidPanic
            get { return this.blocks; }
        }
 
-       public LevelPause LevelPause
-       {
-           get{return this.levelPause;}
-           set{ this.levelPause = value;}
-       }
-
        public ILevel LevelState
        {
            get { return this.levelState; }
            set { this.levelState = value; }
+       }
+
+       public LevelPause LevelPause
+       {
+           get { return this.levelPause; }
+           set { this.levelPause = value; }
        }
 
        public LevelPlay LevelPlay
@@ -90,18 +86,38 @@ namespace PyramidPanic
            set { this.levelPlay = value; }
        }
 
+       public LevelDoorOpen LevelDoorOpen
+       {
+           get { return this.levelDoorOpen; }
+           set { this.levelDoorOpen = value; }
+       }
+
+       public LevelGameOver LevelGameOver
+       {
+           get { return this.levelGameOver; }
+           set { this.levelGameOver = value; }
+       }
+
+       public LevelNextLevel LevelNextLevel
+       {
+           get { return this.levelNextLevel; }
+           set { this.levelNextLevel = value; }
+       }
+
 
 
        //constructor
        public Level(PyramidPanic game, int levelIndex)
        {
            this.game = game;
-           this.levelPath = @"Content\PlayScene\Levels\0.txt";
+           this.levelPath = @"Content\PlayScene\Levels\" + levelIndex + ".txt";
            this.LoadAssets();
-           Score.Initialize();
+           Playermanager.Player = this.Player;
            this.levelPause = new LevelPause(this);
            this.levelPlay = new LevelPlay(this);
            this.levelDoorOpen = new LevelDoorOpen(this);
+           this.levelGameOver = new LevelGameOver(this);
+           this.levelNextLevel = new LevelNextLevel(this);
            this.levelState = this.levelPlay;
 
        }

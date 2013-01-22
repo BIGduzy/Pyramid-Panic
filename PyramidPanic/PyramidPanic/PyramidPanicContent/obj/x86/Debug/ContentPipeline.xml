@@ -262,6 +262,33 @@
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Overlay\overlay.xnb</Output>
       <Time>2013-01-15T11:22:05.9207859+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlayScene\Overlay\GameOverOverlay.png</Source>
+      <Name>PlayScene\Overlay\GameOverOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Overlay\GameOverOverlay.xnb</Output>
+      <Time>2013-01-20T21:39:29.3228447+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Overlay\LevelNextLevel.png</Source>
+      <Name>PlayScene\Overlay\LevelNextLevel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Overlay\LevelNextLevel.xnb</Output>
+      <Time>2013-01-20T21:39:22.3364451+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Background\Congratulation.png</Source>
+      <Name>PlayScene\Background\Congratulation</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\Congratulation.xnb</Output>
+      <Time>2013-01-20T22:01:45.9112931+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

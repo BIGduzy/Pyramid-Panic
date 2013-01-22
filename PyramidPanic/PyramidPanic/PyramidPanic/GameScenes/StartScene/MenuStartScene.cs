@@ -112,6 +112,7 @@ namespace PyramidPanic
                 if (this.buttonstate == Buttonstate.quit)
                 {
                     this.game.GameState = new QuitScene(this.game);
+                    
                 }
             }
 
@@ -149,6 +150,7 @@ namespace PyramidPanic
                 if (this.quit.Rectangle.Intersects(Input.MouseRec()))
                 {
                     this.game.GameState = new QuitScene(this.game);
+                    
                 }
 
             }

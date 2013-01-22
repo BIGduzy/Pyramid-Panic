@@ -27,5 +27,8 @@ Content\PlayScene\Badguys\Scorpion.xnb
 Content\PlayScene\Fonts\Pfont.xnb
 Content\PlayScene\Overlay\DoorOpenOverlay.xnb
 Content\PlayScene\Overlay\overlay.xnb
+Content\PlayScene\Overlay\GameOverOverlay.xnb
+Content\PlayScene\Overlay\LevelNextLevel.xnb
+Content\PlayScene\Background\Congratulation.xnb
 Content\PlayScene\Levels\0.txt
 Content\PlayScene\Levels\1.txt

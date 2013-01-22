@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +13,20 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace PyramidPanic
 {
-    public class LevelNextLevel : ILevel
+    public class LevelEndGame : ILevel
     {
-        //Fields
+        //Field
         private Level level;
-        private Picture gameOver;
-        private int pauseTimeOver = 2;
+        private Picture background, congratulations;
+        private int pauseTimeOver = 5;
         private float timer = 0;
 
         //Constructor
-        public LevelNextLevel(Level level)
+        public LevelEndGame(Level level)
         {
             this.level = level;
-            this.gameOver = new Picture(level.Game, @"PlayScene\Overlay\LevelNextLevel", Vector2.Zero);
+            this.background = new Picture(this.level.Game, @"PlayScene\Background\Background2", Vector2.Zero);
+            this.congratulations = new Picture(this.level.Game, @"PlayScene\Background\Congratulation", new Vector2(120f, 100f));
         }
 
         public void Update(GameTime gameTime)
@@ -33,15 +34,16 @@ namespace PyramidPanic
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > this.pauseTimeOver)
             {
-                Score.MinPointsLevel += 500;
-                level.Game.GameState = new PlayScene(level.Game);
-                this.timer = 0;
+                level.Game.Exit();
+                this.timer = 0f;
             }
         }
 
         public void Draw(GameTime gameTime)
         {
-            this.gameOver.Draw(gameTime);
+            this.level.Game.GraphicsDevice.Clear(Color.Red);
+            this.background.Draw(gameTime);
+            this.congratulations.Draw(gameTime);
         }
     }
 }

@@ -17,12 +17,18 @@ namespace PyramidPanic
         private PyramidPanic game;
         private Level level;
         private int levelNumber = 1;
+        private static int endLevel = 10;
 
 
         //constructor
         public PlayScene(PyramidPanic game)
         {
             this.game = game;
+            if (levelNumber == 0 || Score.isDead())
+            {
+                levelNumber = 0;
+                Score.Initialize();
+            }   
             this.Initialize();
         }
 
@@ -48,12 +54,22 @@ namespace PyramidPanic
             }
             if (Score.isDead())
             {
-                this.game.GameState = new StartScene(this.game);
+                this.level.LevelState = level.LevelGameOver;
             }
             if (Playermanager.WalkOutOfLevel())
             {
+                Score.DoorsAreClosed = true;
                 levelNumber++;
-                this.game.GameState = new PlayScene(game);
+                this.level.Player.Position = new Vector2(100f, 100f);
+                if (levelNumber == endLevel)
+                {
+                    this.level.LevelState = new LevelEndGame(this.level);
+                    levelNumber = 0;
+                }
+                else
+                {
+                    this.level.LevelState = level.LevelNextLevel;
+                }
             }
             this.level.Update(gameTime);
 

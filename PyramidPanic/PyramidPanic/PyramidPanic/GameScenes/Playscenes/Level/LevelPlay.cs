@@ -13,34 +13,39 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace PyramidPanic
 {
-    public class LevelDoorOpen : ILevel
+    public class LevelPlay : ILevel
     {
-        //Fields
+        //fields
         private Level level;
-        private Picture doorsAreOpen;
-        private int pauseTimeOver = 1;
-        private float timer = 0;
 
-        //Constructor
-        public LevelDoorOpen(Level level)
+        //constructor
+        public LevelPlay(Level level) 
         {
             this.level = level;
-            this.doorsAreOpen = new Picture(level.Game, @"PlayScene\Overlay\DoorOpenOverlay", Vector2.Zero);
         }
 
+        //Update
         public void Update(GameTime gameTime)
         {
-            this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.timer > this.pauseTimeOver)
+
+            foreach (Scorpion scorpions in level.Scorpions)
             {
-                level.LevelState = level.LevelPlay;
-                this.timer = 0;
+
+                scorpions.Update(gameTime);
             }
+
+            foreach (Beetle beetles in level.Beetles)
+            {
+
+                beetles.Update(gameTime);
+            }
+            level.Player.Update(gameTime);
         }
 
+        //Draw
         public void Draw(GameTime gameTime)
         {
-            this.doorsAreOpen.Draw(gameTime);
+
         }
     }
 }

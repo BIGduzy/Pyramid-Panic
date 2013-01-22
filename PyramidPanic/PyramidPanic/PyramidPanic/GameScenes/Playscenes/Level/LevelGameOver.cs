@@ -13,64 +13,34 @@ using Microsoft.Xna.Framework.Storage;
 
 namespace PyramidPanic
 {
-    public class LevelPause : ILevel
+    public class LevelGameOver : ILevel
     {
-        //fields
+        //Fields
         private Level level;
-        private Picture overlay;
-        private int pauseTimer = 3;
-        private float timer;
-        private int removeIndex= -1;
-        private string removeType;
+        private Picture gameOver;
+        private int pauseTimeOver = 1;
+        private float timer = 0;
 
-        //properties
-        public int RemoveIdex
-        {
-            set {this.removeIndex = value ;}
-        }
-
-        public string RemoveType
-        {
-            
-            set { this.removeType = value; }
-        }
-
-        //constructor
-        public LevelPause(Level level)
+        //Constructor
+        public LevelGameOver(Level level)
         {
             this.level = level;
-            this.overlay = new Picture(level.Game, @"PlayScene\Overlay\overlay", Vector2.Zero);
+            this.gameOver = new Picture(level.Game, @"PlayScene\Overlay\GameOverOverlay", Vector2.Zero);
         }
 
         public void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.timer > this.pauseTimer)
+            if (this.timer > this.pauseTimeOver)
             {
-                switch (this.removeType)
-                {
-                    case "scorpion":
-                        level.Scorpions.RemoveAt(this.removeIndex);
-                    break;
-
-                    case "beetle":
-                    level.Beetles.RemoveAt(this.removeIndex);
-                    break;
-
-                    default:
-                    break;
-                }
-                level.Player.Position = new Vector2(32f, 32f);
-                level.Player.State = new PlayerIdle(level.Player,0f);
-                this.removeIndex = -1;
-                this.level.LevelState = level.LevelPlay;
-                this.timer = 0f;
+                level.Game.GameState = new StartScene(level.Game);
+                this.timer = 0;
             }
         }
 
         public void Draw(GameTime gameTime)
         {
-            this.overlay.Draw(gameTime);
+            this.gameOver.Draw(gameTime);
         }
     }
 }

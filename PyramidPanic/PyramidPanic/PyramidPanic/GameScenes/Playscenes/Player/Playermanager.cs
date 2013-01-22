@@ -33,7 +33,10 @@ namespace PyramidPanic
 
         public static bool WalkOutOfLevel()
         {
-            if (player.Position.X > 640)
+            if ((player.Position.X > 639) ||
+                 (player.Position.X < -31) ||
+                 (player.Position.Y > 447) ||
+                 (player.Position.Y < -31))
             {
                 return true;
             }
@@ -118,9 +121,9 @@ namespace PyramidPanic
                 if (player.CollisionRec.Intersects(scorpion.Collisionrec))
                 {
                     Score.Lives --;
-                    level.LevelPause.RemoveIdex = level.Scorpions.IndexOf(scorpion);
+                    level.LevelPause.RemoveIndex = level.Scorpions.IndexOf(scorpion);
                     level.LevelPause.RemoveType = "scorpion";
-                    level.LevelState = new LevelPause(level);
+                    level.LevelState = level.LevelPause;
                     
                     break;
                 }
@@ -134,9 +137,9 @@ namespace PyramidPanic
                 if (player.CollisionRec.Intersects(beetle.Collisionrec))
                 {
                     Score.Lives --;
-                    level.LevelPause.RemoveIdex = level.Beetles.IndexOf(beetle);
+                    level.LevelPause.RemoveIndex = level.Beetles.IndexOf(beetle);
                     level.LevelPause.RemoveType = "beetle";
-                    level.LevelState = new LevelPause(level);
+                    level.LevelState = level.LevelPause;
                     
                     break;
                 }

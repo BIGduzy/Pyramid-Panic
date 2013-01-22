@@ -11,19 +11,18 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class QuitScene : IGameState
+    public class GameOverScene : IGameState
     {
-        //fields
+        //Fields
         private PyramidPanic game;
-       
 
-        //constructor
-        public QuitScene(PyramidPanic game)
+
+        //Constructor
+        public GameOverScene(PyramidPanic game)
         {
             this.game = game;
             this.Initialize();
         }
-
 
         //Initialize
         public void Initialize()
@@ -31,27 +30,25 @@ namespace PyramidPanic
             this.LoadContent();
         }
 
-        //loadContent
+        //LoadContent
         public void LoadContent()
         {
 
         }
 
-        //update
+        //Update
         public void Update(GameTime gameTime)
         {
             if (Input.EdgeDetectKeyDown(Keys.Escape))
             {
                 this.game.GameState = new StartScene(this.game);
             }
-
-            this.game.Exit();
         }
 
         //Draw
         public void Draw(GameTime gameTime)
         {
-            this.game.GraphicsDevice.Clear(Color.LavenderBlush);
+
         }
     }
 }

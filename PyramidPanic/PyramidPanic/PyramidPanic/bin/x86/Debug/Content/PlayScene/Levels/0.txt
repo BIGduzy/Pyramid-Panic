@@ -3,7 +3,7 @@ zr................rz
 z.r..............r.x
 x..r...x.P..z...r..z
 x...r..........r...z
-x....r.wwwwww.r....y
+x....r.dddddd.r....y
 x.....rwcaacwr.....x
 x......wbddbw......x
 x......wwyyww......x

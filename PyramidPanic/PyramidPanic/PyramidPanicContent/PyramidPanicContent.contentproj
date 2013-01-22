@@ -212,7 +212,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="PlayScene\Overlay\GameOverOverlay.png">
+      <Name>GameOverOverlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="PlayScene\Overlay\LevelNextLevel.png">
+      <Name>LevelNextLevel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="PlayScene\Overlay\DoorOpenOverlay.png">
       <Name>DoorOpenOverlay</Name>
@@ -221,6 +232,13 @@
     </Compile>
     <Compile Include="PlayScene\Overlay\overlay.png">
       <Name>overlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlayScene\Background\Congratulation.png">
+      <Name>Congratulation</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

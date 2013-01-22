@@ -16,8 +16,15 @@ namespace PyramidPanic
         //fields
         private static int points, lives, scarab;
         private static bool doorsAreClosed;
+        private static int minPointsLevel;
 
         //properties
+        public static int MinPointsLevel
+        {
+            get { return minPointsLevel; }
+            set { minPointsLevel = value; }
+        }
+
         public static bool DoorsAreClosed
         {
             get { return doorsAreClosed; }
@@ -49,6 +56,7 @@ namespace PyramidPanic
             lives = 3;
             scarab = 0;
             doorsAreClosed = true;
+            minPointsLevel = 500;
         }
        
         public static bool openDoor()

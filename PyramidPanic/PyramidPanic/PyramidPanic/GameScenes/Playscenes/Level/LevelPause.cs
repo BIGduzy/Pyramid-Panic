@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,27 +15,25 @@ namespace PyramidPanic
 {
     public class LevelPause : ILevel
     {
-        //fields
+        //Field
         private Level level;
         private Picture overlay;
-        private int pauseTimer = 3;
-        private float timer;
-        private int removeIndex= -1;
+        private int pauseTimeOver = 3;
+        private float timer = 0;
+        private int removeIndex = -1;
         private string removeType;
 
-        //properties
-        public int RemoveIdex
+        //Properties
+        public int RemoveIndex
         {
-            set {this.removeIndex = value ;}
+            set { this.removeIndex = value; }
         }
 
         public string RemoveType
         {
-            
             set { this.removeType = value; }
         }
-
-        //constructor
+        //Constructor
         public LevelPause(Level level)
         {
             this.level = level;
@@ -45,23 +43,21 @@ namespace PyramidPanic
         public void Update(GameTime gameTime)
         {
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (this.timer > this.pauseTimer)
+            if (this.timer > this.pauseTimeOver)
             {
                 switch (this.removeType)
                 {
                     case "scorpion":
                         level.Scorpions.RemoveAt(this.removeIndex);
-                    break;
-
+                        break;
                     case "beetle":
-                    level.Beetles.RemoveAt(this.removeIndex);
-                    break;
-
+                        level.Beetles.RemoveAt(this.removeIndex);
+                        break;
                     default:
-                    break;
+                        break;
                 }
-                level.Player.Position = new Vector2(32f, 32f);
-                level.Player.State = new PlayerIdle(level.Player,0f);
+                level.Player.Position = new Vector2(9 * 32f, 6 * 32f);
+                level.Player.State = new PlayerIdle(level.Player);
                 this.removeIndex = -1;
                 this.level.LevelState = level.LevelPlay;
                 this.timer = 0f;
