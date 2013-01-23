@@ -110,7 +110,7 @@ namespace PyramidPanic
        public Level(PyramidPanic game, int levelIndex)
        {
            this.game = game;
-           this.levelPath = @"Content\PlayScene\Levels\" + levelIndex + ".txt";
+           this.levelPath = @"Content\PlayScene\Levels\"+ levelIndex +".txt";
            this.LoadAssets();
            Playermanager.Player = this.Player;
            this.levelPause = new LevelPause(this);
@@ -183,11 +183,11 @@ namespace PyramidPanic
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'd');
 
                case 'r':
-                   this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 4));
+                   this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'r');
 
                case 's':
-                   this.scorpions.Add( new Scorpion(this.game, new Vector2(x,y),4));
+                   this.scorpions.Add( new Scorpion(this.game, new Vector2(x,y),2));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 's');
 
                case 'w':
@@ -200,7 +200,7 @@ namespace PyramidPanic
                    return new Block(this.game, @"Wall1", new Vector2(x, y), BlockColision.Npas, 'x');
 
                case 'z':
-                   return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'y');
+                   return new Block(this.game, @"Wall2", new Vector2(x, y), BlockColision.Npas, 'z');
 
                case 'P':
                    this.player = new Player(this.game,new Vector2(x,y),3.0f);

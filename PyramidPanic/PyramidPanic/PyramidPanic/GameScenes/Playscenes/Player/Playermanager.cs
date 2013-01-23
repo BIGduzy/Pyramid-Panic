@@ -85,6 +85,7 @@ namespace PyramidPanic
                             break;
                         case 'c':
                             Score.Lives += 1;
+                            Score.Points += 10;
                             break;
                         case 'd':
                             Score.Points += 50;
@@ -99,12 +100,14 @@ namespace PyramidPanic
                             {
                                 if (level.Blocks[i,j].CharItem == 'y')
                                 {
-                                    level.LevelState = level.LevelDoorOpen;
                                     level.Blocks[i, j].BlockColision = BlockColision.Pas;
+                                    Score.DoorsAreClosed = false;
+                                    level.LevelState = level.LevelDoorOpen;
+                                    
                                 }
                             }
                         }
-                        Score.DoorsAreClosed = false;
+                        
                     }
                     level.Treasures.Remove(treasure);
                     break;

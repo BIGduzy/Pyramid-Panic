@@ -16,7 +16,7 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Level level;
-        private int levelNumber = 1;
+        private static int levelNumber = 0;
         private static int endLevel = 10;
 
 
@@ -39,10 +39,17 @@ namespace PyramidPanic
             this.LoadContent();
         }
 
+        public static int LevelNumber
+        {
+            set { levelNumber = value; }
+            get { return levelNumber; }
+        }
+
         //loadContent
         public void LoadContent()
         {
-            this.level = new Level(this.game, this.levelNumber);
+            this.level = new Level(this.game, levelNumber);
+            Console.WriteLine(levelNumber);
         }
 
         //update
@@ -60,8 +67,7 @@ namespace PyramidPanic
             {
                 Score.DoorsAreClosed = true;
                 levelNumber++;
-                this.level.Player.Position = new Vector2(100f, 100f);
-                if (levelNumber == endLevel)
+                if (levelNumber > endLevel)
                 {
                     this.level.LevelState = new LevelEndGame(this.level);
                     levelNumber = 0;
@@ -81,6 +87,7 @@ namespace PyramidPanic
         {
             this.game.GraphicsDevice.Clear(Color.White);
             this.level.Draw(gameTime);
+
         }
     }
 }

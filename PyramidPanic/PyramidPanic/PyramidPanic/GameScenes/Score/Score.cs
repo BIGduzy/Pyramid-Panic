@@ -52,7 +52,7 @@ namespace PyramidPanic
 
         public static void Initialize()
         {
-            points = 0;
+            points = 1000000;
             lives = 3;
             scarab = 0;
             doorsAreClosed = true;
@@ -61,7 +61,7 @@ namespace PyramidPanic
        
         public static bool openDoor()
         {
-            return (points >500) ? true : false;
+            return (points > minPointsLevel) ? true : false;
         }
 
         public static bool isDead()

@@ -56,7 +56,7 @@ namespace PyramidPanic
                     default:
                         break;
                 }
-                level.Player.Position = new Vector2(9 * 32f, 6 * 32f);
+                level.Player.Position = new Vector2(1 * 32f, 1* 32f);
                 level.Player.State = new PlayerIdle(level.Player);
                 this.removeIndex = -1;
                 this.level.LevelState = level.LevelPlay;
