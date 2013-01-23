@@ -30,5 +30,7 @@ Content\PlayScene\Overlay\overlay.xnb
 Content\PlayScene\Overlay\GameOverOverlay.xnb
 Content\PlayScene\Overlay\LevelNextLevel.xnb
 Content\PlayScene\Background\Congratulation.xnb
+Content\Help\help.xnb
+Content\Help\marker.xnb
 Content\PlayScene\Levels\0.txt
 Content\PlayScene\Levels\1.txt

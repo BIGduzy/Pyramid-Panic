@@ -218,12 +218,13 @@ namespace PyramidPanic
                    
            }
        }
-
+       //Update
        public void Update(GameTime gameTime)
        {
            this.levelState.Update(gameTime);
        }
 
+       //Draw
        public void Draw(GameTime gameTime)
        {
            this.background.Draw(gameTime);

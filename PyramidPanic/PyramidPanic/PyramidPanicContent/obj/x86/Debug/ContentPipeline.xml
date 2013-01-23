@@ -289,6 +289,24 @@
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\Congratulation.xnb</Output>
       <Time>2013-01-20T22:01:45.9112931+01:00</Time>
     </Item>
+    <Item>
+      <Source>Help\help.png</Source>
+      <Name>Help\help</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Help\help.xnb</Output>
+      <Time>2013-01-23T19:33:56.2282438+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Help\marker.png</Source>
+      <Name>Help\marker</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Help\marker.xnb</Output>
+      <Time>2013-01-23T19:46:41.0359883+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
