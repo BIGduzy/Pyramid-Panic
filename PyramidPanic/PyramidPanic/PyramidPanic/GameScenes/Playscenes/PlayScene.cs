@@ -18,6 +18,8 @@ namespace PyramidPanic
         private Level level;
         private static int levelNumber;
         private static int endLevel = 10;
+        private Song bgMusic;
+
 
 
         //constructor
@@ -49,7 +51,11 @@ namespace PyramidPanic
         public void LoadContent()
         {
             this.level = new Level(this.game, levelNumber);
-            Console.WriteLine(levelNumber);
+            //Console.WriteLine(levelNumber);
+
+            this.bgMusic = this.game.Content.Load<Song>(@"PlayScene\Background\BGmusic");
+            MediaPlayer.Play(this.bgMusic);
+            MediaPlayer.Volume = 1;
         }
 
         //update

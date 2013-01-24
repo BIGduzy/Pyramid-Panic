@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+
 namespace PyramidPanic
 {
     public abstract class AnimatingSprite
@@ -18,7 +19,7 @@ namespace PyramidPanic
         private int[] xValue = { 0, 32, 64, 96 };
         protected int i = 0;
         private float timer;
-        protected float rotation;
+         float rotation;
 
 
         //constructor

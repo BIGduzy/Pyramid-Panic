@@ -52,7 +52,7 @@ namespace PyramidPanic
 
         public static void Initialize()
         {
-            points = 1000000;
+            points = 0;
             lives = 3;
             scarab = 0;
             doorsAreClosed = true;

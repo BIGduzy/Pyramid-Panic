@@ -32,6 +32,8 @@ Content\PlayScene\Overlay\LevelNextLevel.xnb
 Content\PlayScene\Background\Congratulation.xnb
 Content\Help\help.xnb
 Content\Help\marker.xnb
+Content\PlayScene\Background\BGmusic.xnb
+Content\PlayScene\Background\BGmusic.wma
 Content\PlayScene\Levels\0.txt
 Content\PlayScene\Levels\1.txt
 Content\PlayScene\Levels\2.txt

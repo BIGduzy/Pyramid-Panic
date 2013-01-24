@@ -307,6 +307,16 @@
       <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\Help\marker.xnb</Output>
       <Time>2013-01-23T19:46:41.0359883+01:00</Time>
     </Item>
+    <Item>
+      <Source>PlayScene\Background\BGmusic.mp3</Source>
+      <Name>PlayScene\Background\BGmusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\BGmusic.xnb</Output>
+      <Extra>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\BGmusic.wma</Extra>
+      <Time>2006-03-07T08:37:40+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
