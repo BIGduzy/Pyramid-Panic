@@ -16,7 +16,7 @@ namespace PyramidPanic
         //fields
         private PyramidPanic game;
         private Level level;
-        private static int levelNumber = 0;
+        private static int levelNumber;
         private static int endLevel = 10;
 
 
@@ -66,11 +66,9 @@ namespace PyramidPanic
             if (Playermanager.WalkOutOfLevel())
             {
                 Score.DoorsAreClosed = true;
-                levelNumber++;
-                if (levelNumber > endLevel)
+                if (levelNumber == 10)
                 {
-                    this.level.LevelState = new LevelEndGame(this.level);
-                    levelNumber = 0;
+                    level.LevelState = level.LevelEndGame;
                 }
                 else
                 {

@@ -258,10 +258,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PlayScene\Levels\10.txt">
-      <Name>10</Name>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="PlayScene\Levels\2.txt">
       <Name>2</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -292,6 +288,12 @@
     </None>
     <None Include="PlayScene\Levels\9.txt">
       <Name>9</Name>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PlayScene\Levels\10.txt">
+      <Name>10</Name>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

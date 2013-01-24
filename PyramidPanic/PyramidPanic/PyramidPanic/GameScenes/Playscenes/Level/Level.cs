@@ -37,6 +37,7 @@ namespace PyramidPanic
        private LevelDoorOpen levelDoorOpen;
        private LevelGameOver levelGameOver;
        private LevelNextLevel levelNextLevel;
+       private LevelEndGame levelEndGame;
 
        //properties
        public PyramidPanic Game
@@ -104,6 +105,12 @@ namespace PyramidPanic
            set { this.levelNextLevel = value; }
        }
 
+       public LevelEndGame LevelEndGame
+       {
+           get { return this.levelEndGame; }
+           set { this.levelEndGame = value; }
+       }
+
 
 
        //constructor
@@ -118,6 +125,7 @@ namespace PyramidPanic
            this.levelDoorOpen = new LevelDoorOpen(this);
            this.levelGameOver = new LevelGameOver(this);
            this.levelNextLevel = new LevelNextLevel(this);
+           this.levelEndGame = new LevelEndGame(this);
            this.levelState = this.levelPlay;
 
        }

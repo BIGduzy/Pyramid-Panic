@@ -33,9 +33,18 @@ namespace PyramidPanic
             this.timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (this.timer > this.pauseTimeOver)
             {
-                Score.MinPointsLevel += 500;
-                level.Game.GameState = new PlayScene(level.Game);
-                this.timer = 0;
+                
+                if (PlayScene.LevelNumber == 10)
+                {
+                    this.level.LevelState = new LevelEndGame(level);
+                }
+                else
+                {
+                    Score.MinPointsLevel += 500;
+                    PlayScene.LevelNumber++;
+                    level.Game.GameState = new PlayScene(level.Game);
+                    this.timer = 0;
+                }
             }
         }
 
