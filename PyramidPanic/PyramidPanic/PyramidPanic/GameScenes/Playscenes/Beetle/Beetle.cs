@@ -96,7 +96,7 @@ namespace PyramidPanic
             this.game = game;
             this.position = position;
             this.texture = game.Content.Load<Texture2D>(@"PlayScene\Badguys\Beetle");
-            this.rectangle = new Rectangle((int)this.position.X,(int)this.position.Y,this.texture.Width/4,this.texture.Height);
+            this.rectangle = new Rectangle((int)this.position.X + 16,(int)this.position.Y + 16,this.texture.Width/4,this.texture.Height);
             this.collisionrec = new Rectangle((int)this.position.X, (int)this.position.Y, this.texture.Width / 4, this.texture.Height);
             this.speed = speed;
             this.walkUp = new WalkUp(this);

@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="AnimatingSprite\AnimatingSprite.cs" />
     <Compile Include="GameScenes\GameOverScene\GameOverScene.cs" />
+    <Compile Include="GameScenes\LevelEditorScene\LevelEditorPanel.cs" />
     <Compile Include="GameScenes\Playscenes\Beetle\BeetleManager.cs" />
     <Compile Include="GameScenes\Playscenes\Beetle\IBeetle.cs" />
     <Compile Include="GameScenes\Playscenes\Beetle\Beetle.cs" />

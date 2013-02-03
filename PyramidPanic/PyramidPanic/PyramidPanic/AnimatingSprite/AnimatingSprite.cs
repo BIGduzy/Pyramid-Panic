@@ -19,7 +19,7 @@ namespace PyramidPanic
         private int[] xValue = { 0, 32, 64, 96 };
         protected int i = 0;
         private float timer;
-         float rotation;
+        protected float rotation;
 
 
         //constructor

@@ -317,6 +317,141 @@
       <Extra>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Background\BGmusic.wma</Extra>
       <Time>2006-03-07T08:37:40+01:00</Time>
     </Item>
+    <Item>
+      <Source>LevelEdit\Panel.png</Source>
+      <Name>LevelEdit\Panel</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Panel.xnb</Output>
+      <Time>2013-01-31T09:56:31.3246789+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\mummy.png</Source>
+      <Name>LevelEdit\mummy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\mummy.xnb</Output>
+      <Time>2013-02-03T19:23:48.197347+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Potion.png</Source>
+      <Name>LevelEdit\Potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Potion.xnb</Output>
+      <Time>2013-02-03T19:23:26.1250845+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\pyramid.png</Source>
+      <Name>LevelEdit\pyramid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\pyramid.xnb</Output>
+      <Time>2013-02-03T19:23:52.6776032+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Right.png</Source>
+      <Name>LevelEdit\Right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Right.xnb</Output>
+      <Time>2013-02-03T19:23:27.7481773+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Scarab.png</Source>
+      <Name>LevelEdit\Scarab</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Scarab.xnb</Output>
+      <Time>2013-02-03T19:23:31.7674072+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Scorpion.png</Source>
+      <Name>LevelEdit\Scorpion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Scorpion.xnb</Output>
+      <Time>2013-02-03T19:23:34.0175359+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Treasure1.png</Source>
+      <Name>LevelEdit\Treasure1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Treasure1.xnb</Output>
+      <Time>2013-02-03T19:23:35.8666417+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Treasure2.png</Source>
+      <Name>LevelEdit\Treasure2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Treasure2.xnb</Output>
+      <Time>2013-02-03T19:23:42.3980153+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayScene\Fonts\Arial.spritefont</Source>
+      <Name>PlayScene\Fonts\Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\PlayScene\Fonts\Arial.xnb</Output>
+      <Time>2013-02-03T19:33:17.321899+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Left.png</Source>
+      <Name>LevelEdit\Left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Left.xnb</Output>
+      <Time>2013-02-03T19:23:14.6234266+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Button_load.png</Source>
+      <Name>LevelEdit\Button_load</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Button_load.xnb</Output>
+      <Time>2013-02-03T19:23:24.2329763+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\hulprand.png</Source>
+      <Name>LevelEdit\hulprand</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\hulprand.xnb</Output>
+      <Time>2013-02-03T19:23:45.1231711+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Beetle.png</Source>
+      <Name>LevelEdit\Beetle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Beetle.xnb</Output>
+      <Time>2013-02-03T20:03:40.2811663+01:00</Time>
+    </Item>
+    <Item>
+      <Source>LevelEdit\Block_vert.png</Source>
+      <Name>LevelEdit\Block_vert</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Nick\Documents\Visual Studio 2010\Projects\block 2\PyramidPanic\PyramidPanic\PyramidPanic\bin\x86\Debug\Content\LevelEdit\Block_vert.xnb</Output>
+      <Time>2013-02-03T20:03:43.9893784+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
