@@ -69,14 +69,14 @@ namespace PyramidPanic
         //positie van de muis.
         public static Vector2 MousePosition()
         {
-            return new Vector2(ms.Y, ms.X);
+            return new Vector2(ms.X, ms.Y);
         }
 
         //
         public static Rectangle MouseRec()
         {
             mouseRec.X = ms.X;
-            mouseRec.Y=ms.Y;
+            mouseRec.Y = ms.Y;
             return mouseRec;
         }
     }

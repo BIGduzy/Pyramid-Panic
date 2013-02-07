@@ -131,17 +131,33 @@ namespace PyramidPanic
                  }
 
              }
+
+             if (Input.MouseEdgeDetectPressLeft() &&
+                 Input.MousePosition().X < 640f &&
+                 Input.MousePosition().X > 0f &&
+                 Input.MousePosition().Y > 0f &&
+                 Input.MousePosition().Y < 448f)
+             {
+                 Console.WriteLine(this.levelEditorAssetsIndex);
+                 switch (this.levelEditorAssetsIndex)
+                 {
+                     case 0:
+                         this.levelEditorScene.Level.Blocks[(int)Input.MousePosition().X / 32, (int)Input.MousePosition().Y / 32] = new Block(this.levelEditorScene.Game,
+                             @"door", new Vector2(((int)Input.MousePosition().X / 32) * 32f, ((int)Input.MousePosition().Y / 32) * 32), BlockColision.Npas, 'y');
+                         break;
+                 }
+             }
          }
 
          //Draw
          public void Draw(GameTime gameTime)
          {
              this.background.Draw(gameTime);
-             foreach (Picture picture in this.levelEditorAssets)
+             foreach (Picture picture in this.levelEditorButtons)
              {
                  picture.Draw(gameTime);
              }
-             this.levelEditorAssets[this.levelEditorAssetsIndex].Draw(gameTime);
+             this.levelEditorButtons[this.levelEditorAssetsIndex].Draw(gameTime);
              float levelIndexOffset = (levelEditorScene.LevelNumber > 9) ? 3.4f : 3.7f;
              this.levelEditorScene.Game.SpriteBatch.DrawString(this.Arial,
                  this.levelEditorScene.LevelNumber.ToString(), this.position +
