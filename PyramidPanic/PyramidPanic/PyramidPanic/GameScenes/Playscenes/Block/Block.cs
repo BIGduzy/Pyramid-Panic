@@ -23,6 +23,11 @@ namespace PyramidPanic
         private BlockColision blockColision;
 
         //properties
+        public Vector2 Position
+        {
+            get { return this.position; }
+        }
+
         public BlockColision BlockColision
         {
             get { return this.blockColision;}

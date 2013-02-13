@@ -24,6 +24,7 @@ namespace PyramidPanic
         public Level Level
         {
             get { return this.level; }
+            set { this.level = value; }
         }
         public PyramidPanic Game
         {

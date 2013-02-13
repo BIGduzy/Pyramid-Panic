@@ -38,8 +38,19 @@ namespace PyramidPanic
        private LevelGameOver levelGameOver;
        private LevelNextLevel levelNextLevel;
        private LevelEndGame levelEndGame;
+       private int levelindex;
 
        //properties
+       public int Levelindex
+       {
+           get { return this.levelindex; }
+       }
+
+       public string LevelPath
+       {
+           get { return this.levelPath; }
+       }
+
        public PyramidPanic Game
        {
            get {return this.game ;}
@@ -48,6 +59,7 @@ namespace PyramidPanic
        public Player Player
        {
            get { return this.player;}
+           set { this.player = value; }
        }
 
        public List<Picture> Treasures
@@ -117,6 +129,7 @@ namespace PyramidPanic
        public Level(PyramidPanic game, int levelIndex)
        {
            this.game = game;
+           this.levelindex = levelindex;
            this.levelPath = @"Content\PlayScene\Levels\"+ levelIndex +".txt";
            this.LoadAssets();
            Playermanager.Player = this.Player;
