@@ -177,17 +177,24 @@ namespace PyramidPanic
                                  this.PlaceBlock(@"Wall2", 'y');
                                  break;
                              case 4:
-                                 this.PlaceBlock(@"Transparant", 'B');
+                                 this.PlaceBlock(@"Transparant", 'b');
                                  this.levelEditorScene.Level.Beetles.Add(new Beetle(this.levelEditorScene.Game,
                                                                          new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                                      ((int)Input.MousePosition().Y / 32) * 32f),
                                                                          2.0f));
                                  break;
                              case 5:
-                                 this.PlaceBlock(@"Transparant", 'S');
+                                 this.PlaceBlock(@"Transparant", 's');
                                  this.levelEditorScene.Level.Scorpions.Add(new Scorpion(this.levelEditorScene.Game,
                                                                            new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                                      ((int)Input.MousePosition().Y / 32) * 32f),
+                                                                           2.0f));
+                                 break;
+                             case 6:
+                                 this.PlaceBlock(@"Transparant", 'M');
+                                 this.levelEditorScene.Level.Mummys.Add(new Mummy(this.levelEditorScene.Game,
+                                                                        new Vector2(((int)Input.MousePosition().X / 32) * 32f,
+                                                                                    ((int)Input.MousePosition().Y / 32) * 32f),
                                                                            2.0f));
                                  break;
                              case 7:
@@ -207,7 +214,7 @@ namespace PyramidPanic
                                  this.addTreasure('b', @"PlayScene\Treasures\Treasure2");
                                  break;
                              case 11:
-                                 this.PlaceBlock(@"Transparant", 'E');
+                                 this.PlaceBlock(@"Transparant", 'P');
                                  this.levelEditorScene.Level.Player = new Player(this.levelEditorScene.Game,
                                                                                      new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                                                  ((int)Input.MousePosition().Y / 32) * 32f),
@@ -262,6 +269,15 @@ namespace PyramidPanic
                  if (beetle.Position == new Vector2(((int)Input.MousePosition().X / 32) * 32, ((int)Input.MousePosition().Y / 32) * 32))
                  {
                      this.levelEditorScene.Level.Beetles.Remove(beetle);
+                     break;
+                 }
+             }
+
+             foreach (Mummy mummy in this.levelEditorScene.Level.Mummys)
+             {
+                 if (mummy.Position == new Vector2(((int)Input.MousePosition().X / 32) * 32, ((int)Input.MousePosition().Y / 32) * 32))
+                 {
+                     this.levelEditorScene.Level.Mummys.Remove(mummy);
                      break;
                  }
              }

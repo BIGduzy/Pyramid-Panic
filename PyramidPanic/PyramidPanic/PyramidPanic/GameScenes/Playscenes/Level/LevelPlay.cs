@@ -39,6 +39,12 @@ namespace PyramidPanic
 
                 beetles.Update(gameTime);
             }
+
+            foreach (Mummy mummys in level.Mummys)
+            {
+
+                mummys.Update(gameTime);
+            }
             level.Player.Update(gameTime);
         }
 

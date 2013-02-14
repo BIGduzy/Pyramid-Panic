@@ -17,7 +17,7 @@ namespace PyramidPanic
         private PyramidPanic game;
         private Level level;
         private LevelEditorPanel levelEditorPanel;
-        private int levelNumber = 6;
+        private int levelNumber = 0;
         
 
         //constructor

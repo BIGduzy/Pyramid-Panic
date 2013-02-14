@@ -124,6 +124,12 @@
     <Compile Include="GameScenes\Playscenes\Level\LevelNextLevel.cs" />
     <Compile Include="GameScenes\Playscenes\Level\LevelGameOver.cs" />
     <Compile Include="GameScenes\Playscenes\Level\LevelPause.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\Mummy.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\MummyRight.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\Mummymanager.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\MummyUp.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\MummyPlayerLeft.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\MummyDown.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerDown.cs" />
     <Compile Include="GameScenes\Playscenes\Player\Playermanager.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerUp.cs" />

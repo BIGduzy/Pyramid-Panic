@@ -29,6 +29,7 @@ namespace PyramidPanic
        private List<Picture> treasures;
        private List<Scorpion> scorpions;
        private List<Beetle> beetles;
+       private List<Mummy> mummys;
        private Panel panel;
        private Player player;
        private ILevel levelState;
@@ -76,6 +77,11 @@ namespace PyramidPanic
        {
            get { return this.scorpions; }
        }
+       public List<Mummy> Mummys
+       {
+           get { return this.mummys; }
+       }
+
        public Block[,] Blocks
        {
            get { return this.blocks; }
@@ -86,37 +92,31 @@ namespace PyramidPanic
            get { return this.levelState; }
            set { this.levelState = value; }
        }
-
        public LevelPause LevelPause
        {
            get { return this.levelPause; }
            set { this.levelPause = value; }
        }
-
        public LevelPlay LevelPlay
        {
            get { return this.levelPlay; }
            set { this.levelPlay = value; }
        }
-
        public LevelDoorOpen LevelDoorOpen
        {
            get { return this.levelDoorOpen; }
            set { this.levelDoorOpen = value; }
        }
-
        public LevelGameOver LevelGameOver
        {
            get { return this.levelGameOver; }
            set { this.levelGameOver = value; }
        }
-
        public LevelNextLevel LevelNextLevel
        {
            get { return this.levelNextLevel; }
            set { this.levelNextLevel = value; }
        }
-
        public LevelEndGame LevelEndGame
        {
            get { return this.levelEndGame; }
@@ -148,6 +148,7 @@ namespace PyramidPanic
            this.treasures = new List<Picture>();
            this.scorpions = new List<Scorpion>();
            this.beetles = new List<Beetle>();
+           this.mummys = new List<Mummy>();
            this.panel = new Panel(this.game, new Vector2(0f, 448f));
            this.lines = new List<string>();
            StreamReader reader = new StreamReader(this.levelPath);
@@ -179,6 +180,7 @@ namespace PyramidPanic
            BeetleManager.Level = this;
            ScorpionManager.Level = this;
            Playermanager.Level = this;
+           Mummymanager.Level = this;
            
        }
 
@@ -206,6 +208,11 @@ namespace PyramidPanic
                case 'r':
                    this.beetles.Add(new Beetle(this.game, new Vector2(x, y), 2));
                    return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'r');
+
+               case 'M':
+                   this.mummys.Add(new Mummy(this.game, new Vector2(x, y), 2.0f));
+                   return new Block(this.game, @"Transparant", new Vector2(x, y), BlockColision.Pas, 'M');
+                    
 
                case 's':
                    this.scorpions.Add( new Scorpion(this.game, new Vector2(x,y),2));
@@ -273,6 +280,11 @@ namespace PyramidPanic
            foreach (Beetle beetles in this.beetles)
            {
                beetles.Draw(gameTime);
+           }
+
+           foreach (Mummy mummys in this.mummys)
+           {
+               mummys.Draw(gameTime);
            }
 
            if (this.player != null)
