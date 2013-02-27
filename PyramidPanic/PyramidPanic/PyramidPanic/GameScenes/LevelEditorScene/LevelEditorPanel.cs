@@ -54,10 +54,7 @@ namespace PyramidPanic
              this.levelEditorButtons.Add(
                  new Picture(this.levelEditorScene.Game, @"LevelEdit\Right",
                      this.position + new Vector2(4.5f * 32f, 0f)));
-             //save
-             this.levelEditorButtons.Add(
-                 new Picture(this.levelEditorScene.Game, @"LevelEdit\Button_load",
-                     this.position + new Vector2(15f * 32f, 0f)));
+             
              //plaatje wisselen naar beneden in list
              this.levelEditorButtons.Add(
                  new Picture(this.levelEditorScene.Game, @"LevelEdit\Left",
@@ -66,6 +63,10 @@ namespace PyramidPanic
              this.levelEditorButtons.Add(
                  new Picture(this.levelEditorScene.Game, @"LevelEdit\Right",
                      this.position + new Vector2(11f * 32f, 0f)));
+             //save
+             this.levelEditorButtons.Add(
+                 new Picture(this.levelEditorScene.Game, @"LevelEdit\Button_load",
+                     this.position + new Vector2(15f * 32f, 0f)));
 
              //Assets toevoegen aan de list levelEditorAssets
              this.levelEditorAssets.Add(new Picture(this.levelEditorScene.Game, @"PlayScene\Blocks\Block",
@@ -168,16 +169,16 @@ namespace PyramidPanic
                                  this.PlaceBlock(@"Block", 'w');
                                  break;
                              case 1:
-                                 this.PlaceBlock(@"Door", 'z');
+                                 this.PlaceBlock(@"Door", 'y');
                                  break;
                              case 2:
                                  this.PlaceBlock(@"Wall1", 'x');
                                  break;
                              case 3:
-                                 this.PlaceBlock(@"Wall2", 'y');
+                                 this.PlaceBlock(@"Wall2", 'z');
                                  break;
                              case 4:
-                                 this.PlaceBlock(@"Transparant", 'b');
+                                 this.PlaceBlock(@"Transparant", 'r');
                                  this.levelEditorScene.Level.Beetles.Add(new Beetle(this.levelEditorScene.Game,
                                                                          new Vector2(((int)Input.MousePosition().X / 32) * 32f,
                                                                                      ((int)Input.MousePosition().Y / 32) * 32f),
@@ -199,19 +200,19 @@ namespace PyramidPanic
                                  break;
                              case 7:
                                  this.PlaceBlock(@"Transparant", 'c');
-                                 this.addTreasure('c', @"PlayScene\Treasures\Potion");
+                                 this.addTreasure('c', @"PlayScene\Tressures\Potion");
                                  break;
                              case 8:
                                  this.PlaceBlock(@"Transparant", 'd');
-                                 this.addTreasure('d', @"PlayScene\Treasures\Scarab");
+                                 this.addTreasure('d', @"PlayScene\Tressures\Scarab");
                                  break;
                              case 9:
                                  this.PlaceBlock(@"Transparant", 'a');
-                                 this.addTreasure('a', @"PlayScene\Treasures\Treasure1");
+                                 this.addTreasure('a', @"PlayScene\Tressures\Treasure1");
                                  break;
                              case 10:
                                  this.PlaceBlock(@"Transparant", 'b');
-                                 this.addTreasure('b', @"PlayScene\Treasures\Treasure2");
+                                 this.addTreasure('b', @"PlayScene\Tressures\Treasure2");
                                  break;
                              case 11:
                                  this.PlaceBlock(@"Transparant", 'P');

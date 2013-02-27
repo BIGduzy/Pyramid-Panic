@@ -128,7 +128,7 @@
     <Compile Include="GameScenes\Playscenes\Mummy\MummyRight.cs" />
     <Compile Include="GameScenes\Playscenes\Mummy\Mummymanager.cs" />
     <Compile Include="GameScenes\Playscenes\Mummy\MummyUp.cs" />
-    <Compile Include="GameScenes\Playscenes\Mummy\MummyPlayerLeft.cs" />
+    <Compile Include="GameScenes\Playscenes\Mummy\MummyLeft.cs" />
     <Compile Include="GameScenes\Playscenes\Mummy\MummyDown.cs" />
     <Compile Include="GameScenes\Playscenes\Player\PlayerDown.cs" />
     <Compile Include="GameScenes\Playscenes\Player\Playermanager.cs" />

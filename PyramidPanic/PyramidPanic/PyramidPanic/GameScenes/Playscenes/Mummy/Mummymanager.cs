@@ -16,6 +16,9 @@ namespace PyramidPanic
         //fields
         private static Level level;
         private static Mummy mummy;
+        private static Random random = new Random(2);
+
+
 
         //properties
         public static Level Level
@@ -29,6 +32,11 @@ namespace PyramidPanic
         public static Mummy Mummy
         {
             set { mummy = value; }
+        }
+
+        public static Random Random
+        {
+            get { return random; }
         }
 
        
@@ -52,6 +60,21 @@ namespace PyramidPanic
             }
             return false;
         }
+
+        public static bool IsThereWallLeftOrRight(int offsetX, int offsetY)
+        {
+            if (level.Blocks[(int)(mummy.Position.X / 32) + offsetX, (int)(mummy.Position.Y / 32) + offsetY].BlockColision
+                    == BlockColision.Npas)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+       
         
     }
 }

@@ -108,9 +108,9 @@ namespace PyramidPanic
         //update
         public void Update(GameTime gameTime)
         {
-           
+            Mummymanager.Mummy = this;
                 this.state.Update(gameTime);
-                Mummymanager.Mummy = this;
+                
         }
 
         //draw

@@ -11,61 +11,66 @@ using Microsoft.Xna.Framework.Media;
 
 namespace PyramidPanic
 {
-    public class MummyRight:AnimatingSprite
+    public class MummyLeft:AnimatingSprite
     {
         //fields 
         private Mummy mummy;
         private bool left, right;
-        
 
         //constructor
-        public MummyRight(Mummy mummy) : base(mummy)
+        public MummyLeft(Mummy mummy):base(mummy)
         {
             this.mummy = mummy;
-            this.rotation = 0f;
+            this.rotation = (float)Math.PI;
         }
 
         //Update
         public override void Update(GameTime gameTime)
         {
-            this.mummy.Position += new Vector2(this.mummy.Speed, 0f);
+            this.mummy.Position -= new Vector2(this.mummy.Speed, 0f);
             if (Mummymanager.CollisionDetectionWalls())
             {
                 int Geheel = (int)this.mummy.Position.X / 32;
-                this.mummy.Position = (this.mummy.Position.X >= 0) ? new Vector2((Geheel) * 32, this.mummy.Position.Y) : new Vector2((Geheel - 1) * 32, this.mummy.Position.Y);
-                this.left = Mummymanager.IsThereWallLeftOrRight(0, -1);
-                this.right = Mummymanager.IsThereWallLeftOrRight(0, 1);
+                this.mummy.Position = new Vector2((Geheel +1) * 32, this.mummy.Position.Y);
+                this.left = Mummymanager.IsThereWallLeftOrRight(0, 1);
+                this.right = Mummymanager.IsThereWallLeftOrRight(0, -1);
                 if (!this.left && !this.right)
                 {
+                    //Console.WriteLine("Er zijn geen muren" + MummyManager.Random.Next(2));
                     switch (Mummymanager.Random.Next(3))
                     {
                         case 0:
-                            this.mummy.State = this.mummy.MummyDown;
+                            this.mummy.State = new MummyDown(this.mummy);
                             break;
-
                         case 1:
-                            this.mummy.State = this.mummy.MummyUp;
+                            this.mummy.State = new MummyUp(this.mummy);
                             break;
-
                         case 2:
-                            this.mummy.State = this.mummy.MummyLeft;
+                            this.mummy.State = new MummyRight(this.mummy);
+                            break;
+                        default:
                             break;
                     }
                 }
                 else if (this.left && !this.right)
                 {
-                    this.mummy.State = this.mummy.MummyDown;
+                    //Console.WriteLine("Er is links een muur ik ga rechtsaf");
+                    mummy.State = new MummyUp(this.mummy);
                 }
                 else if (this.right && !this.left)
                 {
-                    this.mummy.State = this.mummy.MummyUp;
+                    //Console.WriteLine("Er is rechts een muur ik ga linksaf");
+                    mummy.State = new MummyDown(this.mummy);
                 }
                 else
                 {
-                    this.mummy.State = this.mummy.MummyLeft;
+                    //Console.WriteLine("Links en rechts zijn er muren ik ga terug");
+                    mummy.State = new MummyRight(this.mummy);
                 }
-               
-            }
+                
+            }  
+        
+            
 
             base.Update(gameTime);
         }
